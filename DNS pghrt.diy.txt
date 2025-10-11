@@ -1,0 +1,3 @@
+
+pghrt.diy.	1	IN	CNAME	pghrt.pages.dev. ; cf_tags=cf-proxied:true
+www.pghrt.diy.	1	IN	CNAME	pghrt.pages.dev. ; cf_tags=cf-proxied:true
