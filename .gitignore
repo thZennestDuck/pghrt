@@ -4,6 +4,7 @@
 *.fls
 *.fdb_latexmk
 *.out
+*.synctex
 *.gz
 *.toc
 LaTeXML.css
