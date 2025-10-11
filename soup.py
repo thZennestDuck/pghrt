@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-#source: @jonesetc.com ty king
+#source: @jonesetc.com ty king you're an icon
 from bs4 import BeautifulSoup
 
 # Parse the file into soup
@@ -19,10 +18,17 @@ header.append(menu)
 # Extract nav
 toc = soup.body.find('div', class_='ltx_page_main').nav.extract()
 
-# Prepend header and toc into body
-soup.body.insert(0, header, toc)
+# adding a toast
+toast = soup.new_tag (
+    "div",
+    id="snackbar",
+    string="Link Copied!"
+)
 
-# Add header info
+# Prepend header and toc into body
+soup.body.insert(0, toast, header, toc)
+
+# Add header info tags
 
 head_meta = soup.new_tag(
     'meta',
@@ -90,6 +96,23 @@ head_meta = soup.new_tag(
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
+
+# find all the section and question headers then add a click to copy
+for element in soup.find_all(["h2", "h3"]):
+    #find the id of its section
+    hash = element.parent['id']
+
+    new_chain = soup.new_tag(
+        'a',
+        **{'class':'ltx_ref chain'},
+        href="#" + hash,
+        title="Click to copy a link here",
+        onclick="copyURI(event)",
+        string='🔗',
+    )
+
+    element.append(new_chain)
+
 
 print("soup")
 

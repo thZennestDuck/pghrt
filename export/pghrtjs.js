@@ -17,3 +17,17 @@ for (i = 0; i < coll.length; i++) {
 		coll[i].classList.add("del");
 	}
 }
+
+function copyURI(evt) {
+	evt.preventDefault();
+	/* ensures url is without hash, then add on correct hash */
+	navigator.clipboard.writeText(window.location.href.replace(window.location.hash,'') + evt.target.getAttribute('href')).then(() => {
+	/* clipboard successfully set */
+    }, () => {
+	/* clipboard write failed */
+    });
+	/* silly little toast */
+	var x = document.getElementById("snackbar");
+	x.className = "show";
+	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+}

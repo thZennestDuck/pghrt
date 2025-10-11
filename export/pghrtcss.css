@@ -20,8 +20,9 @@
 
 body {
 	font-family: 'crm';
-  padding: 0 0px 0 0; margin: 0;
-font-size: 17px;
+	padding: 0 0px 0 0;
+	margin: 0;
+	font-size: 17px;
 }
 
 .ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited { color: blue !important; }
@@ -71,6 +72,12 @@ font-size: 17px;
 	min-width: 0;
 }
 
+.chain {
+	text-decoration:none;
+	font-size: 80%;
+	margin-left: 0.5em;
+}
+
 /*side bar*/
 ol[class="ltx_toclist ltx_toclist_section"]{ 
   max-height: 0;
@@ -111,6 +118,50 @@ font-family: serif;
 .del:after {
 	content: "" !important;
 } 
+
+/* i'm just copying this shit from w3schools ngl */
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
 
 @media screen AND (max-width:1000px) {
 	.ltx_TOC  { width: 0; visibility: hidden; top: 5vh; }
