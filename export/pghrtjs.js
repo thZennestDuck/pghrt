@@ -18,6 +18,7 @@ for (i = 0; i < coll.length; i++) {
 	}
 }
 
+/* copy on click for section permalinks */
 function copyURI(evt) {
 	evt.preventDefault();
 	/* ensures url is without hash, then add on correct hash */
@@ -26,7 +27,7 @@ function copyURI(evt) {
     }, () => {
 	/* clipboard write failed */
     });
-	/* silly little toast */
+	/* toast that i ripped from w3schools. does not nicely handle being spam clicked. w/e*/
 	var x = document.getElementById("snackbar");
 	x.className = "show";
 	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);

@@ -18,6 +18,11 @@ header.append(menu)
 # Extract nav
 toc = soup.body.find('div', class_='ltx_page_main').nav.extract()
 
+# correcting a bug in latexml that drops em dash prefixes on toc in html output
+toc_emdashes = toc.select('a[href*="SSx"] > span')
+for line in toc_emdashes:
+    line.string.insert_before('—')
+
 # adding a toast
 toast = soup.new_tag (
     "div",
@@ -29,6 +34,7 @@ toast = soup.new_tag (
 soup.body.insert(0, toast, header, toc)
 
 # Add header info tags
+# i don't know if there's a better way to do all of these in a batch but like eh w/e
 
 head_meta = soup.new_tag(
     'meta',
@@ -97,7 +103,7 @@ head_meta = soup.new_tag(
 soup.head.append(head_meta)
 soup.head.append("\n")
 
-# find all the section and question headers then add a click to copy
+# find all the section and question headers then add a click to copy icon
 for element in soup.find_all(["h2", "h3"]):
     #find the id of its section
     hash = element.parent['id']
@@ -113,7 +119,7 @@ for element in soup.find_all(["h2", "h3"]):
 
     element.append(new_chain)
 
-
+# i'm at soup
 print("soup")
 
 # Write the updated soup back out to the file
