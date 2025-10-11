@@ -3,7 +3,7 @@
 from bs4 import BeautifulSoup
 
 # Parse the file into soup
-with open('output_prebuild.html', 'r', encoding='utf-8') as fin:
+with open('export/index.html', 'r', encoding='utf-8') as fin:
     soup = BeautifulSoup(fin, 'html.parser')
 
 # Create menu button, header, and nest

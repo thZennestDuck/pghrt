@@ -1,0 +1,10 @@
+*.log
+*.cache
+*.aux
+*.fls
+*.fdb_latexmk
+*.out
+*.gz
+*.toc
+LaTeXML.css
+ltx-article.css

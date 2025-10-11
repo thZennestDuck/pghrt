@@ -1,1 +1,1 @@
- latexmlc --destination=output_prebuild.html pghrt; python soup.py
+ latexmlc --destination=export/index.html pghrt; python soup.py
