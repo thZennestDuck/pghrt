@@ -18,6 +18,9 @@ header.append(menu)
 # Extract nav
 toc = soup.body.find('div', class_='ltx_page_main').nav.extract()
 
+# need id to grab to make the menu button work
+toc['id'] = 'sidebar'
+
 # correcting a bug in latexml that drops em dash prefixes on toc in html output
 toc_emdashes = toc.select('a[href*="SSx"] > span')
 for line in toc_emdashes:
