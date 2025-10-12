@@ -131,7 +131,7 @@ dtm['class'] = 'undefined'
 timestamp = soup.footer.div.contents[0]
 postmarked = timestamp.text.replace("Generated  on ", "Generated on ")
 timestamp.replace_with(postmarked)
-dtm.string = postmarked.replace("Generated  on ", "").replace(" by ", "")
+dtm.string = postmarked.replace("Generated on ", "").replace(" by ", "")
 
 # i'm at soup
 print("soup")
