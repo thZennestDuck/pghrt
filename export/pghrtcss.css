@@ -43,6 +43,9 @@ body {
 }
 .header { display: none; }
 
+.ltx_font_typewriter {
+  background-color: #ddd;
+}
 
 .ltx_page_main { margin-left: 400px; transition: margin 0.2s ease-out; padding: min(1em,1.5%) min(3em,4.5%) min(1em,1.5%) min(3em, 4.5%); width: 50%;}
 .ltx_TOC a { display: block; width: 100%; }
