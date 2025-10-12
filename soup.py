@@ -122,6 +122,17 @@ for element in soup.find_all(["h2", "h3"]):
 
     element.append(new_chain)
 
+# replacing \DTMNow with the footer timestamp because there aren't latexml
+# bindings for the datetime2 package and i want it to look prettier
+# i also remove the double space because it REALLY annoys me. i already sent
+# in an issue about it though. eventually i can remove that line lol
+dtm = soup.body.find('span', class_='ltx_ERROR undefined')
+dtm['class'] = 'undefined'
+timestamp = soup.footer.div.contents[0]
+postmarked = timestamp.text.replace("Generated  on ", "Generated on ")
+timestamp.replace_with(postmarked)
+dtm.string = postmarked.replace("Generated  on ", "").replace(" by ", "")
+
 # i'm at soup
 print("soup")
 
