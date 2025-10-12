@@ -117,7 +117,7 @@ for element in soup.find_all(["h2", "h3"]):
         href="#" + hash,
         title="Click to copy a link here",
         onclick="copyURI(event)",
-        string='🔗',
+        string=' 🔗',
     )
 
     element.append(new_chain)
