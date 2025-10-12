@@ -5,6 +5,7 @@
 *.fdb_latexmk
 *.out
 *.synctex
+*.synctex(busy)
 *.gz
 *.toc
 LaTeXML.css
