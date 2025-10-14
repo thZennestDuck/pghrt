@@ -23,6 +23,7 @@ body {
 	padding: 0 0px 0 0;
 	margin: 0;
 	font-size: 17px;
+  font-variant-ligatures: none;
 }
 
 .ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited { color: blue !important; }
@@ -58,7 +59,7 @@ body {
 .ltx_tocentry { padding-left: 20px }
 .ltx_title_contents {text-align:center; font-size: 120%; font-weight:bold; margin-top: 1em; margin-bottom: 1em; }
 .ltx_tag_section { margin-right: .5em }
-.ltx_p { line-height: 1.4; }
+.ltx_p { line-height: 1.4; text-align: justify; }
 
 .ltx_tocentry_section {
   cursor: pointer;
