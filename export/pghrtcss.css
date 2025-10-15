@@ -29,9 +29,6 @@ body {
 .ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited { color: blue !important; }
 .ltx_personname a:link, .ltx_personname a:visited { color: fuchsia; }
 
-
-.ltx_TOC a
-
 .ltx_title_abstract, .ltx_title, .ltx_font_bold { font-family: 'bold'; font-weight: bold;}
 .ltx_font_italic { font-family: 'ital';}
 .ltx_font_bold.ltx_font_italic { font-family: 'boit' !important; }
@@ -86,6 +83,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  width: 97%;
 }
 
 .ltx_tocentry_subsection:hover, .ltx_ref.active:hover {
