@@ -1,6 +1,6 @@
 // this function adds the + and functionality to the toc so that it is less scary 
 // it's still pretty scary ngl it's a giant toc but at least it starts hidden
-function tocOnClick() {
+function initTocOnClick() {
 	var coll = document.querySelectorAll(".ltx_tocentry.ltx_tocentry_section > .ltx_ref");
 	var i;
 
@@ -68,7 +68,7 @@ function detectColorScheme(){
 
 // source: https://www.accessibilityfirst.at/posts/dark-and-light-mode-a-simple-guide-for-web-design-and-development
 // add onClick to toggle theme between light and dark
-function themeToggle() {
+function initThemeToggle() {
 	document.getElementById('theme-toggle').addEventListener('click', () => {
 		document.documentElement.setAttribute(
 			'data-theme',
@@ -83,8 +83,24 @@ function themeToggle() {
 	});
 }
 
-
+// the same function except it's for font toggle
+function initFontToggle() {
+	document.getElementById('font-toggle').addEventListener('click', () => {
+		document.documentElement.setAttribute(
+			'data-font',
+			document.documentElement.getAttribute('data-font') === 'avec'
+				? 'sans'
+				: 'avec'
+		);
+		localStorage.setItem(
+			'font',
+			document.documentElement.getAttribute('data-font')
+		);
+	});
+}
 
 // run da functions
-tocOnClick();
+initTocOnClick();
 detectColorScheme();
+initThemeToggle();
+initFontToggle();
