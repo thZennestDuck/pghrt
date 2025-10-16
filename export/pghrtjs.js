@@ -43,7 +43,6 @@ function copyURI(evt) {
 // determines if the user has a set theme or a stored theme on load
 function detectColorScheme(){
     var theme="light";    //default to light
-	localStorage.setItem('theme', 'light'); // not technically required
     //local storage is used to override OS theme settings
     if(localStorage.getItem("theme")){
         if(localStorage.getItem("theme") == "dark"){
@@ -63,6 +62,7 @@ function detectColorScheme(){
 		  localStorage.setItem('theme', 'dark');
 		// now honestly not to criticize this code i am copying too much but like
 		// why not reuse the theme var here? surely it's more error prone this way?
+		// is there some sort of perf diff in js this way? surely not? nerds, assemble
     }
 }
 
@@ -84,6 +84,7 @@ function initThemeToggle() {
 }
 
 // the same function except it's for font toggle
+// btw i think i'm a little funny for the var naming
 function initFontToggle() {
 	document.getElementById('font-toggle').addEventListener('click', () => {
 		document.documentElement.setAttribute(
