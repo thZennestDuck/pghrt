@@ -18,6 +18,32 @@
     src: url('font/boit.otf') format('opentype');
 }
 
+/*default for light*/
+:root {
+    --font-color: #000;
+    --link-color:blue;
+    --main-bg: #fff; 
+    --toc-bg: #eee;
+    --toc-hover: #ccc;
+    --toc-accent: #ddd;
+    --typewriter-bg: #ddd;
+    --snackbar-bg: #333;
+    --snackbar-color: #fff;
+}
+
+[data-theme="dark"] {
+    --font-color: #000;
+    --link-color:blue;
+    --main-bg: #fff; 
+    --toc-bg: #eee;
+    --toc-hover: #ccc;
+    --toc-accent: #ddd;
+    --typewriter-bg: #ddd;
+    --snackbar-bg: #333;
+    --snackbar-color: #fff;
+}
+
+
 body {
 	font-family: 'crm';
 	padding: 0 0px 0 0;
@@ -26,7 +52,7 @@ body {
   font-variant-ligatures: none;
 }
 
-.ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited { color: blue !important; }
+.ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited { color: var(--link-color) !important; }
 .ltx_personname a:link, .ltx_personname a:visited { color: fuchsia; }
 
 .ltx_title_abstract, .ltx_title, .ltx_font_bold { font-family: 'bold'; font-weight: bold;}
@@ -42,12 +68,12 @@ body {
 .header { display: none; }
 
 .ltx_font_typewriter {
-  background-color: #ddd;
+  background-color: var(--typewriter-bg);
 }
 
 .ltx_page_main { margin-left: 400px; transition: margin 0.2s ease-out; padding: min(1em,1.5%) min(3em,4.5%) min(1em,1.5%) min(3em, 4.5%); width: 50%;}
 .ltx_TOC a { display: block; width: 100%; }
-.ltx_TOC { position: fixed; overflow-y: scroll; width: 400px; background-color: #eee; transition: width 0.2s ease-out; top: 0; bottom: 0; }
+.ltx_TOC { position: fixed; overflow-y: scroll; width: 400px; background-color: var(--toc-bg); transition: width 0.2s ease-out; top: 0; bottom: 0; }
 .ltx_TOC.show { width: 100vw; visibility: visible; }
 #menu { display: none; }
 
@@ -87,11 +113,11 @@ ol[class="ltx_toclist ltx_toclist_section"]{
 }
 
 .ltx_tocentry_subsection:hover, .ltx_ref.active:hover {
- background-color: #ccc;
+ background-color: var(--toc-hover);
 }
 *
 .ltx_tocentry_section:hover {
-  background-color: #ddd;
+  background-color: var(--toc-accent);
 }
 
 
@@ -105,14 +131,14 @@ ol[class="ltx_toclist ltx_toclist_section"]{
   margin-right: 5px;
   position: relative;
   z-index: 100;
-font-family: serif;
+  font-family: serif;
 }
 
 .ltx_tocentry.ltx_tocentry_section > .ltx_ref.active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
   position: relative;
   z-index: 100;
-font-family: serif; 
+  font-family: serif; 
 }
 
 /* removing +/- from any without subs*/
@@ -126,8 +152,8 @@ font-family: serif;
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--snackbar-bg);
+  color: var(--snackbar-color);
   text-align: center;
   border-radius: 2px;
   padding: 16px;
