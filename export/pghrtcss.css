@@ -24,25 +24,31 @@
     --link-color:blue;
     --main-bg: #fff; 
     --toc-bg: #eee;
-    --toc-hover: #ccc;
     --toc-accent: #ddd;
+    --toc-hover: #ccc;
     --typewriter-bg: #ddd;
     --snackbar-bg: #333;
     --snackbar-color: #fff;
+    --table-border-color: #000;
+    /* set the font to avec */
 }
 
 [data-theme="dark"] {
-    --font-color: #000;
-    --link-color:blue;
-    --main-bg: #fff; 
-    --toc-bg: #eee;
-    --toc-hover: #ccc;
-    --toc-accent: #ddd;
-    --typewriter-bg: #ddd;
+    --font-color: #eee;
+    --link-color: #00cfff;
+    --main-bg: #121212; 
+    --toc-bg: #323232;
+    --toc-accent: #242424;
+    --toc-hover: #161616;
+    --typewriter-bg: #323232;
     --snackbar-bg: #333;
-    --snackbar-color: #fff;
+    --snackbar-color: #eee;
+    --table-border-color: #eee;
 }
 
+[data-theme="sans"] {
+/* set the font to sans */
+}
 
 body {
 	font-family: 'crm';
@@ -50,9 +56,11 @@ body {
 	margin: 0;
 	font-size: 17px;
   font-variant-ligatures: none;
+  background: var(--main-bg);
+  color: var(--font-color);
 }
 
-.ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited { color: var(--link-color) !important; }
+.ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited, a.ltx_LaTeXML_logo:visited{ color: var(--link-color) !important; }
 .ltx_personname a:link, .ltx_personname a:visited { color: fuchsia; }
 
 .ltx_title_abstract, .ltx_title, .ltx_font_bold { font-family: 'bold'; font-weight: bold;}
@@ -73,9 +81,11 @@ body {
 
 .ltx_page_main { margin-left: 400px; transition: margin 0.2s ease-out; padding: min(1em,1.5%) min(3em,4.5%) min(1em,1.5%) min(3em, 4.5%); width: 50%;}
 .ltx_TOC a { display: block; width: 100%; }
-.ltx_TOC { position: fixed; overflow-y: scroll; width: 400px; background-color: var(--toc-bg); transition: width 0.2s ease-out; top: 0; bottom: 0; }
+.ltx_TOC { position: fixed; overflow-y: scroll; width: 400px; background-color: var(--toc-bg); transition: width 0.2s ease-out; top: 0; bottom: 0; border-right: 2px solid var(--toc-accent);}
 .ltx_TOC.show { width: 100vw; visibility: visible; }
 #menu { display: none; }
+
+.ltx_border_tt, .ltx_border_t, .ltx_border_bb { border-color: var(--table-border-color); }
 
 
 .ltx_toclist { padding: 0; }
@@ -170,6 +180,38 @@ ol[class="ltx_toclist ltx_toclist_section"]{
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
+/* styling the toggle buttons, which yes i know this is cursed */
+
+#theme-toggle, #font-toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 80px;
+  color: var(--font-color);
+  line-height: 0;
+  padding-bottom: 9px;
+  border-radius: 0;
+  border: 2px solid var(--toc-accent);
+  background: var(--toc-bg);
+  cursor: pointer;
+}
+
+#theme-toggle:hover, #font-toggle:hover {
+  background: var(--toc-hover);
+}
+
+/* BELIEVE ME, i know this is cursed. YOU try having a generated html output that you're adding amendments to with sloppy code injection! AND also clearly defined content layout requirements based on the project requirements. i don't need to over engineer this, okay!? */
+#font-toggle {
+  top: 80px;
+  border-top: 0;
+  font-size: 55px;
+  padding-bottom: 6px;
+  padding-right: 1px;
+  font-family: 'crm';
+}
+
 @-webkit-keyframes fadein {
   from {bottom: 0; opacity: 0;} 
   to {bottom: 30px; opacity: 1;}
@@ -191,7 +233,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
 }
 
 @media screen AND (max-width:1000px) {
-	.ltx_TOC  { width: 0; visibility: hidden; top: 5vh; }
+	.ltx_TOC  { width: 0; visibility: hidden; top: 5vh; border-right: none; }
 	#menu { display: block; width: 100%; padding: 0; border-radius: 0; border-top: none; border-left: none; border-right: none;}
 	.header { display: block; position: sticky; width: 100%; top: 0; padding: 0;}
 	.ltx_page_main { margin: 0px; width: 90% !important;}
