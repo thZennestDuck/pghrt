@@ -1,21 +1,19 @@
-@font-face {
-    font-family: 'bold';
-    src: url('font/bold.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'ital';
-    src: url('font/italics.otf') format('opentype');
-}
-
+/* avec - computer modern */
 @font-face {
     font-family: 'crm';
     src: url('font/crm.otf') format('opentype');
 }
-
 @font-face {
-    font-family: 'boit';
-    src: url('font/boit.otf') format('opentype');
+    font-family: 'crmb';
+    src: url('font/crmb.otf') format('opentype');
+}
+@font-face {
+    font-family: 'crmi';
+    src: url('font/crmi.otf') format('opentype');
+}
+@font-face {
+    font-family: 'crmbi';
+    src: url('font/crmbi.otf') format('opentype');
 }
 
 /*default for light*/
@@ -30,7 +28,10 @@
     --snackbar-bg: #333;
     --snackbar-color: #fff;
     --table-border-color: #000;
-    /* set the font to avec */
+    --font: 'crm';
+    --font-i: 'crmi';
+    --font-b: 'crmb';
+    --font-bi: 'crmbi';
 }
 
 [data-theme="dark"] {
@@ -46,12 +47,17 @@
     --table-border-color: #eee;
 }
 
-[data-theme="sans"] {
-/* set the font to sans */
+/* i changed how i wanted to do this and now it's annoyingly repeititive but that's fineeee*/
+/* i'm gonna be honest i don't actually LIKE web design you feel me? */
+[data-font="sans"] {
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-i: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-b: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-bi: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-	font-family: 'crm';
+	font-family: var(--font);
 	padding: 0 0px 0 0;
 	margin: 0;
 	font-size: 17px;
@@ -63,9 +69,10 @@ body {
 .ltx_TOC a:link, .ltx_TOC a:visited, .ltx_p a:link, .ltx_p a:visited, a.ltx_LaTeXML_logo:visited{ color: var(--link-color) !important; }
 .ltx_personname a:link, .ltx_personname a:visited { color: fuchsia; }
 
-.ltx_title_abstract, .ltx_title, .ltx_font_bold { font-family: 'bold'; font-weight: bold;}
-.ltx_font_italic { font-family: 'ital';}
-.ltx_font_bold.ltx_font_italic { font-family: 'boit' !important; }
+.ltx_title_abstract, .ltx_title, .ltx_font_bold { font-family: var(--font-b);}
+.ltx_font_italic { font-family: var(--font-i);}
+.ltx_font_bold.ltx_font_italic, .ltx_title .ltx_font_italic { font-family: var(--font-bi) !important; }
+.ltx_title_subsection, .ltx_title, .ltx_font_bold { font-weight: bold; }
 
 #menu {
 	content: '\09776';
@@ -76,7 +83,7 @@ body {
 .header { display: none; }
 
 .ltx_font_typewriter {
-  background-color: var(--typewriter-bg);
+  background-color: var(--typewriter-bg); 
 }
 
 .ltx_page_main { margin-left: 400px; transition: margin 0.2s ease-out; padding: min(1em,1.5%) min(3em,4.5%) min(1em,1.5%) min(3em, 4.5%); width: 50%;}
@@ -90,7 +97,7 @@ body {
 
 .ltx_toclist { padding: 0; }
 .ltx_tocentry { padding-left: 20px }
-.ltx_title_contents {text-align:center; font-size: 120%; font-weight:bold; margin-top: 1em; margin-bottom: 1em; }
+.ltx_title_contents {text-align:center; font-size: 120%; margin-top: 1em; margin-bottom: 1em; }
 .ltx_tag_section { margin-right: .5em }
 .ltx_p { line-height: 1.4; text-align: justify; }
 
@@ -209,6 +216,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
   font-size: 55px;
   padding-bottom: 6px;
   padding-right: 1px;
+  padding-left: 4px;
   font-family: 'crm';
 }
 

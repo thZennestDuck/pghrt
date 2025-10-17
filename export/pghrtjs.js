@@ -39,31 +39,36 @@ function copyURI(evt) {
 }
 
 // source: https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting
-// ty jimmy banks <3
+// ty jimmy banks
 // determines if the user has a set theme or a stored theme on load
-function detectColorScheme(){
-    var theme="light";    //default to light
-    //local storage is used to override OS theme settings
-    if(localStorage.getItem("theme")){
-        if(localStorage.getItem("theme") == "dark"){
-            var theme = "dark";
-        }
-    } else if(!window.matchMedia) {
-        //matchMedia method not supported
-        return false;
-    } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        //OS theme setting detected as dark
-        var theme = "dark";
-    }
+function detectColorScheme() {
+	// check if already saved dark
+	if (localStorage.getItem("theme")) {
+		if (localStorage.getItem("theme") == "dark") {
+			document.documentElement.setAttribute("data-theme", "dark");
+		}
+	} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		// set to dark if OS preferred
+		document.documentElement.setAttribute("data-theme", "dark");
+		localStorage.setItem('theme', 'dark');
+	} else {
+		// default light otherwise
+		document.documentElement.setAttribute("data-theme", "light");
+		localStorage.setItem('theme', 'light');
+	}
+}
 
-    //dark theme preferred, set document with a `data-theme` attribute
-    if (theme=="dark") {
-         document.documentElement.setAttribute("data-theme", "dark");
-		  localStorage.setItem('theme', 'dark');
-		// now honestly not to criticize this code i am copying too much but like
-		// why not reuse the theme var here? surely it's more error prone this way?
-		// is there some sort of perf diff in js this way? surely not? nerds, assemble
-    }
+function detectFont(){
+    // check if user wants sans
+	if (localStorage.getItem("font") == "sans") {
+		document.documentElement.setAttribute("data-font", "sans");
+		localStorage.setItem('font', 'sans');
+	}
+	else {
+		// otherwise give avec
+		document.documentElement.setAttribute("data-font", "avec");
+		localStorage.setItem('font', 'avec');
+	}
 }
 
 // source: https://www.accessibilityfirst.at/posts/dark-and-light-mode-a-simple-guide-for-web-design-and-development
@@ -103,5 +108,6 @@ function initFontToggle() {
 // run da functions
 initTocOnClick();
 detectColorScheme();
+detectFont();
 initThemeToggle();
 initFontToggle();
