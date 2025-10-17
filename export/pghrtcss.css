@@ -100,7 +100,7 @@ body {
 .ltx_tocentry { padding-left: 20px }
 .ltx_title_contents {text-align:center; font-size: 120%; margin-top: 1em; margin-bottom: 1em; }
 .ltx_tag_section { margin-right: .5em }
-.ltx_p { line-height: 1.4; text-align: justify; }
+.ltx_p { line-height: 1.4; }
 
 .ltx_tocentry_section {
   cursor: pointer;
