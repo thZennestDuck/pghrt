@@ -245,7 +245,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
 	.ltx_TOC  { width: 0; visibility: hidden; top: 5vh; border-right: none; }
 	#menu { display: block; width: 100%; padding: 0; border-radius: 0; border-top: none; border-left: none; border-right: none; background: var(--toc-bg);color: var(--font); border-bottom: 2px solid var(--toc-hover);}
 	.header { display: block; position: sticky; width: 100%; top: 0; padding: 0;}
-	.ltx_page_main { margin: 0px; width: 90% !important;}
+	.ltx_page_main { margin: auto; width: 90% !important;}
 	.ltx_eqn_table {width: 90% !important;}
   #theme-toggle, #font-toggle {height: var(--mobile-button); width: var(--mobile-button); font-size: 30px; border-right: none; min-width: 45px; }
   #theme-toggle { top: 5vh;  border-top: none;}
