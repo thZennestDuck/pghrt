@@ -75,7 +75,7 @@ body {
 .ltx_title_abstract, .ltx_title, .ltx_font_bold { font-family: var(--font-b);}
 .ltx_font_italic { font-family: var(--font-i);}
 .ltx_font_bold.ltx_font_italic, .ltx_title .ltx_font_italic { font-family: var(--font-bi) !important; }
-.ltx_title_subsection, .ltx_title, .ltx_font_bold { font-weight: bold; }
+.ltx_title_subsection, .ltx_title, .ltx_font_bold { font-weight: bold; color: var(--font-bold);}
 
 #menu {
 	content: '\09776';
