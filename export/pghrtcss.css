@@ -19,6 +19,7 @@
 /*default for light*/
 :root {
     --font-color: #000;
+    --font-bold: #000;
     --link-color:blue;
     --main-bg: #fff; 
     --toc-bg: #eee;
@@ -37,6 +38,7 @@
 
 [data-theme="dark"] {
     --font-color: #eee;
+    --font-bold: #fff;
     --link-color: #00cfff;
     --main-bg: #121212; 
     --toc-bg: #323232;
@@ -44,7 +46,7 @@
     --toc-hover: #161616;
     --typewriter-bg: #323232;
     --snackbar-bg: #333;
-    --snackbar-color: #eee;
+    --snackbar-color: #fff;
     --table-border-color: #eee;
 }
 
@@ -197,7 +199,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
   width: 80px;
   height: 80px;
   font-size: 80px;
-  color: var(--font-color);
+  color: var(--font-bold);
   line-height: 0;
   padding-bottom: 9px;
   border-radius: 0;
