@@ -15,6 +15,21 @@ menu = soup.new_tag(
 header = soup.new_tag('div', **{'class':'header'})
 header.append(menu)
 
+# Create toggle buttons, header, and nest
+toggles = soup.new_tag('div', **{'class':'togglebuttons'})
+menu = soup.new_tag(
+    'button',
+    id='theme-toggle',
+    string='☀',
+)
+toggles.append(menu)
+menu = soup.new_tag(
+    'button',
+    id='font-toggle',
+    string='Aa',
+)
+toggles.append(menu)
+
 # Extract nav
 toc = soup.body.find('div', class_='ltx_page_main').nav.extract()
 
@@ -34,7 +49,7 @@ toast = soup.new_tag (
 )
 
 # Prepend header and toc into body
-soup.body.insert(0, toast, header, toc)
+soup.body.insert(0, toast, toggles, header, toc)
 
 # Add header info tags
 # i don't know if there's a better way to do all of these in a batch but like eh w/e
