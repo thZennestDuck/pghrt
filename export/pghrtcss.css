@@ -92,8 +92,8 @@ body {
 :target::before { 
   display: block; 
   content: ""; 
-  margin-top: -5vh; 
-  height: 5vh; 
+  margin-top: -2vh; 
+  height: 2vh; 
   visibility: hidden; 
   pointer-events: none;
 }
@@ -262,6 +262,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
   #theme-toggle { top: 5vh;  border-top: none;}
   #font-toggle {top: calc(2 * var(--mobile-button)); }
 	.ltx_tocentry.ltx_tocentry_section > .ltx_ref:after { margin-right: 20px; }
+  :target::before { margin-top: -5vh; height: 5vh; }
 
 }
 
