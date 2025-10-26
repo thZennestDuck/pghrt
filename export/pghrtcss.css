@@ -89,6 +89,15 @@ body {
   background-color: var(--typewriter-bg); 
 }
 
+:target::before { 
+  display: block; 
+  content: ""; 
+  margin-top: -5vh; 
+  height: 5vh; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+
 .ltx_page_main { margin-left: 400px; transition: margin 0.2s ease-out; padding: min(1em,1.5%) min(3em,4.5%) min(1em,1.5%) min(3em, 4.5%); width: 50%;}
 .ltx_TOC a { display: block; width: 100%; }
 .ltx_TOC { position: fixed; overflow-y: scroll; width: 400px; background-color: var(--toc-bg); transition: width 0.2s ease-out; top: 0; bottom: 0; border-right: 2px solid var(--toc-accent);}
