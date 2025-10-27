@@ -175,50 +175,82 @@ ol[class="ltx_toclist ltx_toclist_section"]{
 	content: "" !important;
 } 
 
+/* return to ref button ⮌ */
+#return.show:after {
+    content: "⮌";
+    display: block;
+}
+
+/* return to ref button ⮌ */
+#return:after {
+    content: "🡱";
+    display: block;
+    top: 40px;
+    position: relative;
+}
+
+#return {
+    position: fixed;
+    bottom: 5vh;
+    left: calc(55% + 400px);
+    width: 80px;
+    height: 80px;
+    font-size: 70px;
+    color: var(--font-bold);
+    line-height: 0;
+    padding: 0;
+    border-radius: 0;
+    border: 2px solid var(--toc-accent);
+    background: var(--toc-bg);
+    cursor: pointer;
+    text-align: center;
+    font-family: 'crm';
+}
+
 /* i'm just copying this shit from w3schools ngl */
 
 #snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: var(--snackbar-bg);
-  color: var(--snackbar-color);
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: var(--snackbar-bg);
+    color: var(--snackbar-color);
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
 }
 
 #snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 /* styling the toggle buttons, which yes i know this is cursed */
 
 #theme-toggle, #font-toggle {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  font-size: 80px;
-  color: var(--font-bold);
-  line-height: 0;
-  padding-bottom: 9px;
-  border-radius: 0;
-  border: 2px solid var(--toc-accent);
-  background: var(--toc-bg);
-  cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    color: var(--font-bold);
+    line-height: 0;
+    padding-bottom: 9px;
+    border-radius: 0;
+    border: 2px solid var(--toc-accent);
+    background: var(--toc-bg);
+    cursor: pointer;
 }
 
 #theme-toggle:hover, #font-toggle:hover {
-  background: var(--toc-hover);
+    background: var(--toc-hover);
 }
 
 /* BELIEVE ME, i know this is cursed. YOU try having a generated html output that you're adding amendments to with sloppy code injection! AND also clearly defined content layout requirements based on the project requirements. i don't need to over engineer this, okay!? */
@@ -263,13 +295,16 @@ ol[class="ltx_toclist ltx_toclist_section"]{
   #font-toggle {top: calc(2 * var(--mobile-button)); }
 	.ltx_tocentry.ltx_tocentry_section > .ltx_ref:after { margin-right: 20px; }
   :target::before { margin-top: -5vh; height: 5vh; }
-
+  #return {left: calc(95% - 50px) !important; height: 50px; width: 50px; font-size: 50px; }
+  #return:after { top: 25px; }
 }
 
 
 @media screen AND (max-width:500px) {
-
 	.ltx_eqn_table {font-size: 15px; }
+}
 
-
+/* hack for the return button to not cut off the screen until mobile crossover */
+@media screen AND (max-width:1200px) {
+    #return {left: calc(55% + 350px); }
 }

@@ -48,8 +48,15 @@ toast = soup.new_tag (
     string="Link Copied!"
 )
 
-# Prepend header and toc into body
-soup.body.insert(0, toast, toggles, header, toc)
+# add return to ref button
+ref = soup.new_tag (
+    "div",
+    id="return",
+    title="Return to previous position"
+)
+
+# prepend bottom with all the silly stuff i add
+soup.body.insert(0, toast, ref, toggles, header, toc)
 
 # Add header info tags
 # i don't know if there's a better way to do all of these in a batch but like eh w/e

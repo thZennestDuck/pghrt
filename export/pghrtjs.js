@@ -5,12 +5,13 @@ function initTocOnClick() {
 	var i;
 
 	for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function () {
+		coll[i].addEventListener("click", function (event) {
 			this.classList.toggle("active");
 			var content = this.nextElementSibling;
 			if (content) {
 				if (content.style.maxHeight) {
 					content.style.maxHeight = null;
+					event.preventDefault(); // don't jump when closing 
 				} else {
 					content.style.maxHeight = content.scrollHeight + "px";
 				}
@@ -33,6 +34,8 @@ function copyURI(evt) {
 	// clipboard write failed
     });
 	// toast that i ripped from w3schools. does not nicely handle being spam clicked. w/e
+	// OKAY understanding more later. why is this replace and not remove? so ugly wow...
+	// you're telling me that chatgpt and copilot were trained on obtuse garbage like this!?
 	var x = document.getElementById("snackbar");
 	x.className = "show";
 	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
@@ -105,9 +108,57 @@ function initFontToggle() {
 	});
 }
 
+// saving the scroll position for clicking references or toc
+function saveScroll() {
+	var coll = document.querySelectorAll(".ltx_ref");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function () {
+			document.getElementById("return").classList.add("show"); // only fires once
+
+			pos = window.scrollY;
+			scrollArray = JSON.parse(sessionStorage.getItem('scrollPos'));
+			scrollArray.unshift(pos);		
+			sessionStorage.setItem('scrollPos', JSON.stringify(scrollArray));
+		});
+	}
+}
+
+// it returns. positions stored in array then will jump back 
+function returnScroll() {
+	document.getElementById("return").addEventListener("click", function () {
+
+		scrollArray = JSON.parse(sessionStorage.getItem('scrollPos'));
+		// check if saved, otherwise goto top and remove back arrow
+		if (scrollArray.length > 1) {
+			pos = scrollArray.shift();
+			sessionStorage.setItem('scrollPos', JSON.stringify(scrollArray));
+			window.scroll(0, Number(pos));
+		}
+		else if (scrollArray.length == 1) {
+			this.classList.remove("show");
+			pos = scrollArray.shift();
+			sessionStorage.setItem('scrollPos', JSON.stringify(scrollArray));
+			window.scroll(0, Number(pos));
+			// scroll top
+		}
+		else {
+			this.classList.remove("show");
+			window.scroll(0, 0);
+			// scroll top
+		}
+
+	});
+}
+
 // run da functions
 initTocOnClick();
 detectColorScheme();
 detectFont();
 initThemeToggle();
 initFontToggle();
+saveScroll();
+returnScroll();
+// init scoll pos array storage (should this be done elsehow?)
+sessionStorage.setItem('scrollPos', JSON.stringify([]));
