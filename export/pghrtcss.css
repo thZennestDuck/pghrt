@@ -185,7 +185,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
 #return:after {
     content: "🡱";
     display: block;
-    top: 40px;
+    top: 30px;
     position: relative;
 }
 
@@ -204,7 +204,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
     background: var(--toc-bg);
     cursor: pointer;
     text-align: center;
-    font-family: 'crm';
+    font-family: sans-serif;
 }
 
 /* i'm just copying this shit from w3schools ngl */
@@ -296,7 +296,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
 	.ltx_tocentry.ltx_tocentry_section > .ltx_ref:after { margin-right: 20px; }
   :target::before { margin-top: -5vh; height: 5vh; }
   #return {left: calc(95% - 50px) !important; height: 50px; width: 50px; font-size: 50px; }
-  #return:after { top: 25px; }
+  #return:after { top: 23px; }
 }
 
 
