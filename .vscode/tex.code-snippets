@@ -1,0 +1,27 @@
+{
+    "Add a TODO comment": {
+		"prefix": "todo",
+		"body": [
+			"% TODO: "
+		],
+		"description": "Creates a TODO comment (remember to delete them after tho)"
+	},
+
+    "italic": {
+        "prefix": "it",
+        "body": ["\\textit{$1}"],
+        "description": "Creates an italic sequence"
+    },
+    
+    "bold": {
+        "prefix": "bf",
+        "body": ["\\textbf{$1}"],
+        "description": "Creates an bold sequence"
+    },
+    
+    "subsection": {
+        "prefix": "sub",
+        "body": ["\\subsection{$1}"],
+        "description": "Creates a subsction title"
+    },
+}
