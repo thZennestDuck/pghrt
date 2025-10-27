@@ -185,7 +185,7 @@ ol[class="ltx_toclist ltx_toclist_section"]{
 #return:after {
     content: "🡱";
     display: block;
-    top: 30px;
+    top: 35px;
     position: relative;
 }
 
