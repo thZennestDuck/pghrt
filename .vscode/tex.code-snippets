@@ -24,4 +24,16 @@
         "body": ["\\subsection{$1}"],
         "description": "Creates a subsction title"
     },
+
+    "question": {
+        "prefix": "ques",
+        "body": ["Question \\ref{$1}"],
+        "description": "Creates a ref to another paragraph"
+    },
+    
+    "label": {
+        "prefix": "label",
+        "body": ["\\label{$1}"],
+        "description": "Creates a label anchor"
+    },
 }
