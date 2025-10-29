@@ -5,14 +5,14 @@ phone to ensure the optimum ASCII art experience.
 
                  XXXXXXXXXXXXX               
             XXXXX  / |___ \   XXXXX            
-         XXX _ _   | | __) |   _   XXX         
-       XX   / / |  | |/ __/   / |     XX       
-      X     | | |  |_|_____|  | |       X      
-    XX      | | |             | |  ____  XX    
-   X_  ___  |_|_|             |_| |___ \   X   
-  X/ |/ _ \                         __) |   X  
- X | | | | |                       / __/     X 
- X | | |_| |                      |_____|    X 
+         XXX _ _   | | __) |    _  XXX         
+       XX   / / |  | |/ __/    / |    XX       
+      X     | | |  |_|_____|   | |      X      
+    XX      | | |              | |  ____ XX    
+   X_  ___  |_|_|              |_| |___ \  X   
+  X/ |/ _ \                          __) |  X  
+ X | | | | |                        / __/    X 
+ X | | |_| |                       |_____|   X 
 X  |_|\___/                             _____ X
 X / _ \                                |___ / X
 X| (_) |                                 |_ \ X
@@ -55,11 +55,11 @@ X   /_/                                |____/ X
 ============================================================================
 ============A comprehensive FAQ/Walkthrough for Feminizing HRT==============
 ============================================================================
-==="The Time Cube of HRT guides" - gretchen (@boxofmillipedes.bsky.social)==
+=="The Time Cube of HRT guides" - gretchen (@humanremains.northsky.social)==
 ============================================================================
 ===================By: Katie Tightpussy (@katie.bzky.team)==================
-===========================October 8, 2025==================================
-=============================Version 1.21===================================
+===========================October 27, 2025=================================
+=============================Version 1.28===================================
 ============================================================================
 
 
@@ -82,10 +82,10 @@ A Practical Guide To Feminizing HRT
 Katie Tightpussy
 
 Helpfully modified into a 90s-00s style .txt file by gretchen 
-(@boxofmillipedes.bsky.social) for Gen X and Millennial readers, mostly 
+(@humanremains.northsky.social) for Gen X and Millennial readers, mostly 
 because I thought it'd be funny.
 
-(October 8, 2025)
+(October 27, 2025)
 
 ============================================================================
 DISCLAIMER
@@ -98,10 +98,64 @@ be treated accordingly as mere opinion rather than statement of fact or
 medical advice. This guide prioritizes community moral truth where scientific 
 research falters. Basically, don’t get mad at me.
 
+
+============================================================================
+		T A B L E     O F     C O N T E N T S...
+============================================================================
+| Chapter     | Title                                | CTRL+F Code   |
+|---------------------------------------------------------------------------
+| 0           | FOREWARD                             | Alpha         |
+|---------------------------------------------------------------------------
+| 0.1         | DEDICATION                           | Beta          |
+|---------------------------------------------------------------------------
+| 1           | INTRODUCTION                         | Gamma         |
+|---------------------------------------------------------------------------
+| 2           | WHY INJECTIONS                       | Delta         |
+|---------------------------------------------------------------------------
+| 3           | TYPES AND DOSAGES                    | Epsilon       |
+|---------------------------------------------------------------------------
+| 4           | BLOOD TESTS AND LEVELS               | Zeta          |
+|---------------------------------------------------------------------------
+| 5           | TECHNIQUE AND SUPPLIES               | Eta           |
+|---------------------------------------------------------------------------
+| 6           | SOURCING VIALS                       | Theta         |
+|---------------------------------------------------------------------------
+| 7           | TROUBLESHOOTING                      | Iota          |
+|---------------------------------------------------------------------------
+| 8           | PROGESTERONE                         | Kappa         |
+|---------------------------------------------------------------------------
+| 9           | TESTOSTERONE                         | Lambda        |
+|---------------------------------------------------------------------------
+| 10          | ANTIANDROGENS                        | Mu            |
+|---------------------------------------------------------------------------
+| 11          | MYTHS AND MISCS                      | Nu            |
+|---------------------------------------------------------------------------
+| 12          | CREATINE                             | Xi            |
+|---------------------------------------------------------------------------
+| 13          | CLOSING REMARKS                      | Omicron       |
+|---------------------------------------------------------------------------
+| 13.1        | FRIENDS OF PGHRT                     | Pi            |
+|---------------------------------------------------------------------------
+| 13.2        | ABOUT THE AUTHOR                     | Rho           |
+|---------------------------------------------------------------------------
+| 13.3        | DISCLOSURES                          | Sigma         |
+|---------------------------------------------------------------------------
+| 13.4        | ACKNOWLEDGEMENTS                     | Tau           |
+|---------------------------------------------------------------------------
+| 13.5        | CHEAT CODES                          | Upsilon       |
+|---------------------------------------------------------------------------
+| 13.6        | CHANGELOG                            | Phi           |
+============================================================================
+
+
  
 ============================================================================
 0 - FOREWORD
 ============================================================================
+
+ ---------------------
+| CTRL+F Code = Alpha |
+ ---------------------
 
 The purpose of this living document is to catalogue my thoughts and opinions 
 regarding feminizing HRT because I believe that the various community wikis 
@@ -154,11 +208,25 @@ page/document so that you can refer back to it any time you have questions
 about your HRT. It is a lot to absorb up front, so it’s okay if it doesn’t! No 
 rush on any of this.
 
+This document can also be downloaded as a PDF (https://pghrt.diy/pghrt.pdf). 
+Please do so. 
+
+Alternatively, you can read a modern html version if you are inclined 
+(https://pghrt.diy/). It will be updated more frequently than this .txt 
+version.
+
+If you are interested in doing a translation or any other alternate
+version, please get in touch!
+
 
 ============================================================================
 DEDICATION
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Beta  |
+ ---------------------
+ 
 This document is dedicated to all of our sisters who did not make it. May we 
 carry the light of their torch into another day.
 
@@ -167,6 +235,10 @@ carry the light of their torch into another day.
 1 - INTRODUCTION
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Gamma |
+ ---------------------
+ 
 1.1 Is taking estrogen safe?
 
 With modern bioidentical hormones, HRT could not be much safer. You’re just 
@@ -269,7 +341,6 @@ throughout the day. Under 4mg is almost never a sufficient dosage.
 
 1.8 What’s wrong with gel?
 
-
     -Difficult to dose accurately which leads to inconsistent levels;
 
     -Requires regular application of goop due to a relatively short half-life;
@@ -316,11 +387,74 @@ Yes. To the point that I wrote all of this so that I could repeat myself less
 by instead linking this. A properly dosed injection regimen is the best form 
 of estrogen that we have for achieving monotherapy target levels.
 
+
+1.12 Is this chart accurate? 
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X ___  __  __        _   X ___                    X __  __                 X
+X| __|/ _|/ _|___ __| |_ X| __|_ ___ __           X|  \/  |__ ___ __       X
+X| _||  _|  _/ -_) _|  _|X| _|\ \ / '_ \_         X| |\/| / _` \ \ /_      X
+X|___|_| |_| \___\__|\__|X|___/_\_\ .__(_)    _   X|_|  |_\__,_/_\_(_)     X
+X                        X / _ \ _|_| ___ ___| |_ X ___  __  __        _   X
+X                        X| (_) | ' \(_-</ -_)  _|X| __|/ _|/ _|___ __| |_ X
+X                        X \___/|_||_/__/\___|\__|X| _||  _|  _/ -_) _|  _|X
+X                        X                        X|___|_| |_| \___\__|\__|X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                        X                        X                        X
+X Decreased Boners       X Imminent               X Inverse Priapism       X
+X                        X                        X                        X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                        X                        X                        X
+X Translucent Skin       X 3 - 16 Weeks           X Everyone can just see  X
+X                        X                        X all your organs and    X
+X                        X                        X shit. It's nasty,      X
+X                        X                        X dude.                  X
+X                        X                        X                        X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                        X                        X                        X
+X Breastile Deployment   X Varies, depending on   X Exponential Growth     X
+X                        X planetary alignments.  X                        X
+X                        X                        X                        X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X                        X                        X                        X
+X Pee                    X Stored in the Balls    X Fact checked by Real   X
+X                        X                        X American Patriots      X
+X                        X                        X Verdict: TRUE          X
+X                        X                        X                        X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+    Figure 0: This Chart Sucks [gretchen's note: mine rules, actually]
+
+No. While this guide is not interested in playing whackamole by responding
+directly to every instance of misinformation on social media, the prevalence 
+of this chart both online and in doctor-provided resources across languages 
+paired with the sheer volume of harm it has caused denotes need for special 
+exception beyond off-hand reference in Question 11.6.
+
+This chart is categorically false. Nearly every aspect of it is misleading in 
+some capacity, with the one exception being that it is wholly true that 
+estrogen does not cause vocal changes. The time ranges listed for “expected 
+onset” are misleading, and the idea of a time limit for “maximum effect” is 
+so misleading that it borders on criminal. A plethora of changes are not 
+listed (such as mental effects) or are wrong (the chart contradicts itself 
+about erectile dysfunction). No consideration is given towards regimen quality 
+either. The key aspects of the chart requiring nuance are discussed across 
+this guide, so the only general takeaway should be that change happens at 
+different rates. This chart causes poor expectations, provides an inaccurate 
+picture of what HRT does, and sets trans people up for failure by limiting 
+their understanding of hormones. Please disregard it in its entirety. Except 
+for the part about pee. That part is true. Pee is stored in the balls.
+
+Now, let us continue after this detour.
+ 
  
 ============================================================================
 2 - WHY INJECTIONS
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Delta |
+ ---------------------
 
 2.1 What makes injections so good?
 
@@ -345,10 +479,11 @@ it has enough. If there are consistently enough hormones in your body, it
 stops producing more. The “consistent” part is what injections are capable of 
 that other administration routes struggle with. Trying to do sufficient 
 monotherapy on pills, for instance, is very likely impossible in most 
-situations. In more specific terms regarding the HPG axis, luteinizing hormone 
-(LH) and follicle-stimulating hormone (FSH) are suppressed by increased serum 
-estradiol levels, thus inhibiting GnRH production and by extension 
-testosterone production in the testes.
+situations. In more specific terms regarding the HPG axis 
+(https://en.wikipedia.org/wiki/Hypothalamic-pituitary-gonadal_axis), 
+luteinizing hormone (LH) and follicle-stimulating hormone (FSH) are suppressed 
+by increased serum estradiol levels, thus inhibiting GnRH production and by 
+extension testosterone production in the testes.
 
 
 2.4 How are injections safer?
@@ -402,6 +537,12 @@ from increased breast development, improved mental health, alleviated side
 effects of antiandrogens or other forms of estrogen, generally feeling better, 
 etc. Switching is worth it.
 
+It should be noted that time on HRT before injections is not
+”wasted”, nor is there a limited window that estrogen is most ef-
+fective for feminization. It is the consistency of injections that makes them
+as good as they are, but the destination will be largely the same either way. 
+See Questions 11.5 and 11.6.
+
 
 2.10 But injections are scary?
 
@@ -445,6 +586,9 @@ mind, this guide will still be here. And if you don’t, so be it
 3 - TYPES AND DOSAGES
 ============================================================================
 
+ -----------------------
+| CTRL+F Code = Epsilon |
+ -----------------------
 
 Key Vocabulary
 
@@ -512,10 +656,8 @@ everything HRT-related that you are taking and at what frequencies.
 
 Your dosage is the concentration of your vial multiplied by the volume that 
 you are injecting.
-
 	
-	Concentration(mg/ml)∗volume(ml)=dosage(mg)
-	
+	Concentration(mg/ml)∗volume(ml)=dosage(mg)	
 
 Please understand that volume alone is not a dosage. An analogy would be with 
 baking: you cannot just say “bake for 45 minutes” because you have to know 
@@ -562,6 +704,12 @@ comparisons between them, but there is no method to convert one to another.
 
 
 3.10 How can I compare different curves and dosages between esters?
+
+If you would like to get nerdy, I rate estrannai.se (http://estrannai.se/) 
+quite highly. Keep in mindthat this isn’t required but it is a good tool for 
+performing rough comparisons. Here 
+(https://estrannai.se/#i0__cu,7,7,1-cu,5,7,3-cu,5,7,2) is an example 
+comparison between typical weekly dosages which we will now see individually.
 
 It should be noted that the dosages I list below should be sufficient on the 
 lower end of the range in most cases. Start with the lower number and move up 
@@ -731,6 +879,10 @@ Figure 4: The Moon
 4 - BLOOD TESTS AND LEVELS
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Zeta  |
+ ---------------------
+ 
 Acquiring Results
 
 4.1 How often should I test my levels?
@@ -903,6 +1055,10 @@ or whatever else. It’s all estrogen at the end of the day.
 5 - TECHNIQUE AND SUPPLIES
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Eta   |
+ ---------------------
+ 
 Sites & Safety
 
 5.1 How do I safely perform an injection?
@@ -961,7 +1117,7 @@ play a role. I recommend injecting on the side of the leg as shown in the
 video(s) because it is doable for most people and is capable of being very 
 consistent which means consistently painless injections once your technique is 
 practiced, but other people prefer their glute or their stomach. This video 
-(https://vertisis.com/articles/how-to-self-administer-a-subcutaneous-injection) 
+(https://vertisis.com/articles/how-to-self-administer-a-subcutaneous-injection)
 shows other injections sites that can be acceptable depending on the supplies 
 you use. Figure out what works best for you.
 
@@ -1142,12 +1298,13 @@ myself?
 
 You might like an auto-injector. As the name suggests, auto-injectors perform 
 the injection for you. Auto-injectors like the UnionMedico 45/90 Super Grip 
-can take 1ml syringes which can take the difficulty out of injecting (but you 
-still manually press the plunger), whereas auto-injectors like the Owen 
-Mumford Autoject 2 entirely hide the needle of an insulin syringe and 
-automatically push down the plunger. There are also a variety of 3D printable 
-designs available online. I have used none of these products and these are not 
-endorsements.
+(https://unionmedico.com/90-super-grip/) can take 1ml syringes which can take 
+the difficulty out of injecting (but you still manually press the plunger), 
+whereas auto-injectors like the Owen Mumford Autoject 2 
+(https://www.owenmumford.com/us/medical-devices/autoject-2) entirely hide the 
+needle of an insulin syringe and automatically push down the plunger. There 
+are also a variety of 3D printable designs available online. I have used none 
+of these products and these are not endorsements.
 
 
 Basics of a Vial
@@ -1235,6 +1392,10 @@ you can go here (https://safeneedledisposal.org/).
 6 - SOURCING VIALS
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Theta |
+ ---------------------
+ 
 6.1 Where do I get estrogen vials to inject?
 
 Broadly speaking, you have two options: pharmaceutical sources and DIY 
@@ -1288,9 +1449,9 @@ Pharmaceutical Sourcing
 
     -Harder to stockpile;
 
-    Access is subject to the whims of your country’s political situation which 
-	also means that your transness will likely be included on your medical 
-	record.
+    -Access is subject to the whims of your country’s political situation 
+	which also means that your transness will likely be included on your 
+	medical record.
 
 
 DIY Sourcing
@@ -1311,6 +1472,7 @@ DIY Sourcing
     -No requirement of dealing with the medical system;
     
     -It’s probably made with love.
+
 
 6.6 What are the cons of DIY sources?
 
@@ -1487,10 +1649,15 @@ recommended for batch consistency and in many cases is necessary depending on
 the carrier oil and the desired concentration. Some people find it irritating, 
 but others don’t.
 
+
 ============================================================================
 7 - TROUBLESHOOTING
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Iota  |
+ ---------------------
+ 
 Dosage Uncertainty
 
 7.1 My levels aren’t what I expected them to be. Why not?
@@ -1570,7 +1737,9 @@ No. Leakage can happen for any number of reasons and is rarely enough to make
 a difference, so you do not need to do another injection. For the future, make 
 sure to leave the needle in for 5-10 seconds before retracting and then apply 
 pressure afterwards. You might consider using the air lock technique mentioned 
-above if you are particularly concerned about leakage.
+above or the Z-track method 
+(https://www.nurse.com/nursing-resources/definitions/what-is-z-track-method/)
+if you are particularly concerned about leakage.
 
 
 7.9 Sometimes I am really sore after an injection. Will I die?
@@ -1604,10 +1773,15 @@ contents have separated entirely. With a lot more heat and stirring the
 crystals might reincorporate, but it is simplest and safest to replace the 
 vial if you can.
 
+
 ============================================================================
 8 - PROGESTERONE
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Kappa |
+ ---------------------
+ 
 8.1 Do I want to take progesterone?
 
 Probably. This is a controversial question for some reason. Detractors 
@@ -1804,10 +1978,15 @@ It is recommended to not take either of those if you are someone affected by
 this interaction, but it is not in all cases anyway. Note that these 
 depressive effects may be felt for up to a month after stopping.
 
+
 ============================================================================
 9 - TESTOSTERONE
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Lambda |
+ ---------------------
+ 
 9.1 Why don’t we want zero testosterone?
 
 Testosterone is an essential sex hormone which plays a key role in your health 
@@ -1872,7 +2051,7 @@ feel.
 
 If you are an American, you would have to get a prescription or ask any juicer 
 at your closest Planet Fitness. Elsewhere, it depends on what gym chain is 
-closest to you. Disclaimer: This is a joke. See Question 6.11 “Is DIY legal?”
+closest to you. Disclaimer: This is a joke. See Question 6.11.
 
 
 9.8 Are other steroids equivalent to testosterone in an HRT context?
@@ -1911,10 +2090,15 @@ how dihydrotestosterone cream is useful when a patient doesn’t respond to
 testosterone (particularly in the case of 5α-Reductase deficiencies). So, 
 food for thought. Someone get Oliver Longdick to handle the rest of this.
 
+
 ============================================================================
 10 - ANTIANDROGENS
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Mu    |
+ ---------------------
+ 
 10.1 What are “antiandrogens”?
 
 Antiandrogens, commonly also referred to as “T blockers” or just “blockers”, 
@@ -2044,10 +2228,15 @@ simply pharmacies in another country, although these often take some hurdles
 to purchase from. Dutasteride and finasteride are generally the easiest to get 
 over-the-counter because of their commonality as hair loss medication.
 
+
 ============================================================================
 11 - MYTHS AND MISCS
 ============================================================================
 
+ ---------------------
+| CTRL+F Code = Nu    |
+ ---------------------
+ 
 Common Questions
 
 11.1 Should I be worried about blood clots?
@@ -2071,7 +2260,8 @@ still include it in their pre-surgery guidelines out of concern for blood
 clots, but this is torture that has been disproven and even WPATH doesn’t 
 recommend it anymore. Remarkable, I know. 
 
-Per WPATH SOC 8 Statement 12.19:
+Per WPATH SOC 8 Statement 12.19 
+(https://www.tandfonline.com/doi/pdf/10.1080/26895269.2022.2100644):
 
 	"After careful examination, investigators have found no perioperative 
 	increase in the rate of VTE [KT: venous thromboembolism, i.e. a blood 
@@ -2321,7 +2511,10 @@ Aside from using it regularly, ways to improve erectile function include:
 1) Improving your fitness and physical health, particularly your 
 cardiovascular ability; 2) consider medication like tadalafil or sildenafil; 
 and 3) consider testosterone supplementation (see Section 9 “TESTOSTERONE”).
-
+If you would like to read a longer explanation for how erectile function 
+works, this Substack article 
+(https://stainedglasswoman.substack.com/p/how-to-maintain-your-penis-function) 
+provides a good overview of the topic.
 
 11.21 How do I increase cum/pre-cum volume on HRT?
 
@@ -2362,7 +2555,23 @@ that is chemical or behavioral. A matter of perspective.
 
 11.25 Should I be on PrEP?
 
-Yes.
+Yes. Pre-exposure prophylaxis for HIV prevention (PrEP) 
+(https://en.wikipedia.org/wiki/Pre-exposure_prophylaxis_for_HIV_prevention) is 
+a category of antiviral drugs for the purpose of preventing HIV/AIDS. This is 
+not directly related to HRT, but it is common for trans women to be at 
+elevated risk of HIV/AIDs. Given the history of the AIDS pandemic, PrEP is a 
+miracle of modern medicine that should interest you. Note: There is no effect 
+of any PrEP drug on HRT so you are encouraged to be on PrEP. If you are 
+sexually active, you should strongly consider being on PrEP. Even if you are 
+not sexually active, trans women are at a significantly higher risk of sexual 
+violence, so you should still strongly consider being on PrEP. In most places 
+you are likely to be prescribed Truvada as a once-daily pill, although if you 
+experience nausea as a side effect you can likely swap to Descovy with no 
+change in effectiveness. In the US, insurance commonly does not cover Descovy
+unless you have tried or say you have tried Truvada. The novel drug 
+lenacapavir as a twice-yearly injection is expected to make PrEP significantly 
+easier as access becomes more widely available, if current options are 
+prohibitive for you.
 
 
 Medical Malpractice
@@ -2508,8 +2717,8 @@ uncharted waters thus why their mention is otherwise absent from this guide.
 You’re on your own if that’s something you want to explore, so please be safe. 
 I don’t personally rate them very highly as I have not seen much to suggest 
 that they work well for how people usually think or want them to work, at 
-least not without a lot more caveats, but obviously there are people who like
- them. It’s just not something I feel comfortable giving recommendations for.
+least not without a lot more caveats, but obviously there are people who like 
+them. It’s just not something I feel comfortable giving recommendations for.
 
 The various proposed nonbinary regimens are often highly individualized 
 because they are specific to what a persons’ particular goals are. All HRT 
@@ -2524,12 +2733,12 @@ goals than just hormones alone.
 11.39 Are things like “herbal HRT” or “phytoestrogens” legitimate?
 
 No. If someone is telling you they have “herbal HRT”, they are telling you 
-they have snake oil. The only thing that is going to feminize you is estrogen,
- not plant estrogens. No amount of “natural” products are a replacement for 
- estrogen itself. This isn’t a common scam and you probably already know, but 
- just in case you run into it, now you know for sure. If it smells like 
- bullshit, it’s probably bullshit. Unless we’re talking about bug steroids in 
- which case yeah those are actually cool. Won’t feminize you though.
+they have snake oil. The only thing that is going to feminize you is estrogen, 
+not plant estrogens. No amount of “natural” products are a replacement for 
+estrogen itself. This isn’t a common scam and you probably already know, but 
+just in case you run into it, now you know for sure. If it smells like 
+bullshit, it’s probably bullshit. Unless we’re talking about bug steroids in 
+which case yeah those are actually cool. Won’t feminize you though.
 
 
 11.40 Is the Reddit Doctor that people constantly talk about good?
@@ -2546,9 +2755,49 @@ what you could even theoretically do with a bathtub, unless you think estrogen
 vials are full of the bathwater of trans women. I don’t know why you would 
 think that though. It’s obviously cum.
 
+
+11.42 How does HRT affect fertility?
+
+It is important to understand that this is extremely understudied so exact 
+figures cannot be stated, and given the seriousness of pregnancy, I urge you 
+to practice safe sex and lean on the side of caution where possible. HRT 
+itself can, and likely will, make you infertile eventually, but only through 
+full suppression ofthe HPG axis (See Question 2.3) over a long time span. In 
+other words, if you haven’t had bottom surgery of any kind and you are on an 
+HRT regimen that is less capable of HPG axis suppression (such as pills), then 
+this is more of a consideration.
+
+If the HPG axis is not suppressed then it is fully possible to impregnate 
+someone, and the timeline for sperm maturation is long enough that this is 
+true even after the HPG axis has been initially suppressed for multiple
+months. Please take this very seriously. Full HPG axis suppression for at 
+minimum six months, perhaps closer to a year out of an abundance of caution, 
+is recommended.
+
+
+11.43 Is infertility from HRT reversible?
+
+It is theoretically possible to reverse HRT-induced infertility, assuming you
+weren’t already infertile prior to HRT (a large assumption!), but there are 
+not many documented cases of this so the full efficacy of fertility 
+restoration after long-term HRT is unknown. The process would involve 
+restarting the HPG axis with a variety of medications along with entirely 
+stopping HRT, which would in essence require a hormonal detransition for 
+likely six months at minimum, and even then sperm quality is not certain or 
+guaranteed. It is not something that should be planned for, to say the least, 
+so planning around it would be wise. A sperm bank would be recommended before 
+or early in HRT, financially permitting, if potential biological children are 
+a priority and if a future relationship where that is possible/desired is 
+likely.
+
+
 ============================================================================
 12 - CREATINE [gretchen's note: oh for fuck's sake]
 ============================================================================
+
+ ---------------------
+| CTRL+F Code = Xi    |
+ ---------------------
 
 12.1 What is creatine?
 
@@ -2656,6 +2905,10 @@ talking about it!!!
 13 - CLOSING REMARKS
 ============================================================================
 
+ -----------------------
+| CTRL+F Code = Omicron |
+ -----------------------
+
 If any of the following are true:
 
     -you are still mad at me despite the disclaimer;
@@ -2687,9 +2940,62 @@ your presence is a blessing on those around you, and that you deserve to be
 treated with respect. Even if you do nothing else, your life is a feat worth 
 praising. Thank you.
 
+
+============================================================================
+FRIENDS OF PGHRT
+============================================================================
+
+ ---------------------
+| CTRL+F Code = Pi    |
+ ---------------------
+
+Across this document is a scattering of links to other guides and resources.
+Below is a consolidation of them which will also include more links to external
+resources as time goes on, ideally by other trans people. For the privacy minded
+or noided, note that some of these are Google Docs links.
+
+1. SW4EEWATAOTTM - TL;DR for PGHRT
+(https://startwith4mgestradiolenanthateweeklyandtestatonetothreemonths.com/) 
+
+2. HRT Cafe - HRT Resource Aggregator
+(https://hrtcafe.net/)
+
+3. Transfeminine Science - Informational resource for trans medical literature
+(https://transfemscience.org/)
+
+4. Estrannai.se - Estradiol Pharmacokinetics Playground
+(http://estrannai.se/)
+
+5. Globoho.moe - Thailand Orchiectomy Medical Tourism Travel Guide
+(https://globoho.moe/)
+
+6. Julia’s FUE Guide - COMING SOON, I’M BULLYING HER TO WRITE FASTER
+
+7. Sky’s Feminine Figure Beginner Program - An exercise regimen geared
+towards trans fems
+(https://docs.google.com/document/d/
+1-NyE5EY5TTaRRMhk7HlTbKJ7HifjEsA4jlDO1qKQVl0/edit?tab=t.0)
+
+8. Sky’s Diet 101 - A guide towards adjusting weight in a healthy way
+(https://docs.google.com/document/d/
+114sztSw1aVWM2pXLDl9NrHklyvewz3EmFiHiisjM71k/edit?tab=t.0)
+
+9. How to Maintain Erectile Function on HRT - A longer form explanation on the 
+”use it or lose it” phenomenon
+(https://stainedglasswoman.substack.com/p/how-to-maintain-your-penis-function)
+
+10. Biohax Guide Googleslop Edition - Trans Masc DIY Guide
+(https://docs.google.com/document/d/
+1DXFxzN0XTudPZez_SO61fpqncRLPH_Be_QG_8Pcz9LU/edit?pli=1&tab=t.0)
+
+
 ============================================================================
 ABOUT THE AUTHOR
 ============================================================================
+
+ ---------------------
+| CTRL+F Code = Rho   |
+ ---------------------
 
 Katie Tightpussy is an award-winning author and professional trans woman with 
 nearly a decade of experience in the field of transgender. Her accomplishments 
@@ -2698,11 +3004,17 @@ injections, being physically unable to shut up, and utilizing a very fortunate
 set of hyperfixations as they relate to transbobulation of the humors. She 
 spends her days in the idyllic rural countryside of Los Angeles scheming of 
 new ways to achieve world domination and enjoys riding her bicycle. Media 
-inquiries can reach her agent at katietightpussy.com.
+inquiries can reach her agent at katietightpussy.com 
+(http://katietightpussy.com/).
+
 
 ============================================================================
 DISCLOSURES
 ============================================================================
+
+ ---------------------
+| CTRL+F Code = Sigma |
+ ---------------------
 
 No robot girls were harmed in the making of this document, including any 
 usage of generative large language models. The author does not endorse any 
@@ -2713,9 +3025,14 @@ The author declares an attraction towards women and acknowledges a potential
 conflict of interest for the existence of more beautiful trans women in the 
 world.
 
+
 ============================================================================
 ACKNOWLEDGEMENTS
 ============================================================================
+
+ --------------------
+| CTRL+F Code = Tau  |
+ --------------------
 
 Though the text is primarily my voice, this document would not be even half 
 as good without the contributions, feedback, and suggestions from others 
@@ -2727,26 +3044,37 @@ generally being fun nerds to talk to; love y’all. Special thanks to CB and J
 for close review that also inspired some very good bits. Thanks to KG for 
 additional intersex information. Thanks to w [sic] for additional injection 
 resources. Thanks to BIR collectively for a plethora of crucial nerd nitpicks. 
-Appreciation for general review from C, JTP, K, S, and V. Thanks to everyone 
-on Bluesky who encouraged me to write this up in the first place, and everyone 
-over the years sharing knowledge. And of course: much appreciation to all HRT 
-nerds, even when we disagree, since we’re all trying to do the best for our 
-community where we’ve otherwise been let down. Keep up the good work everyone.
+Appreciation for general review from C, JTP, K, S, and V. Thanks to E for web
+dev assistance. Thanks to everyone on Bluesky who encouraged me to write this 
+up in the first place, and everyone over the years sharing knowledge. And of 
+course: much appreciation to all HRT nerds, even when we disagree, since we’re 
+all trying to do the best for our community where we’ve otherwise been let 
+down. Keep up the good work everyone.
 
 Shout out to my IB Chemistry HL teacher many years ago who quite reasonably 
 doubted my studiousness even though I’m now putting much of that knowledge 
 to use for the art of transsexuality; go figure.
 
+
+============================================================================
+CHEAT CODES
+============================================================================
+
+ -----------------------
+| CTRL+F Code = Upsilon |
+ -----------------------
+
+You will find no cheat codes here. Cheat codes are inherently sinful and you 
+should be ashamed of yourself for reading this section of the guide.
+
+
 ============================================================================
 CHANGELOG
 ============================================================================
 
-Full Compilation Datetime: \DTMnow
-
-(There aren’t LaTeXML bindings for datetime2 so this is only for versioning 
-the PDF. For the webpage, look at the bottom of your screen silly. There 
-aren’t bindings for hanging or hyphenat either, so the formatting is slightly 
-ugly. My life is so hard.)
+ --------------------
+| CTRL+F Code = Phi  |
+ --------------------
 
 2025-08-20: Initial release. 15.9k words.
 
@@ -2778,7 +3106,8 @@ words.
 
 2025-09-23: A wide variety of clarifications up and down the line. 18.1k words.
 
-2025-09-24: Added an important note about surgery to Question 11.1. 18.3k words.
+2025-09-24: Added an important note about surgery to Question 11.1. 18.3k 
+words.
 
 2025-09-24: “Katie my doctor told me-” It never ends. 18.5k words.
 
@@ -2792,4 +3121,24 @@ Sorry that I don’t. I thought I’d be done by now anyway! 18.7k words.
 2025-10-02: Added a big bold warning about recapping to Question 5.13 because 
 SOMEONE didn’t watch the video smh. 18.9k words.
 
-2025-10-08: .txt version done. Deal with it. 19.4k words.
+2025-10-10: Added Question 11.42 and Question 11.43 per request. Honestly I
+just forgot about fertility being a thing lol. Also added the Friends Of PGHRT
+postword section. 19.5k words.
+
+2025-10-10: Added gretchen’s version (.txt) and fixed formatting. 19.5k words.
+
+2025-10-11: Added permalinks to everything, yay! And finally made a git repo.
+Look at me being a big girl, wow. 19.5k words.
+
+2025-10-11: Added an external link to Question 11.20. 19.6k words.
+
+2025-10-14: Reduced the pithiness and expanded the usefulness of Question
+11.25 per repeat request because I guess there is public health utility to 
+doing so. 19.8k words.
+
+2025-10-17: Dark mode! And a font toggle off. Plus a few links. 19.8k words.
+
+2025-10-25: A variety of micro tweaks and the inclusion of Question 1.12. 
+20.2k words.
+
+2025-10-27: gretchen's updated version. 21.1k words.
