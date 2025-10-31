@@ -1,5 +1,10 @@
 #source: @jonesetc.com ty king you're an icon
 from bs4 import BeautifulSoup
+import csv
+
+# seasonings for soup. it's a chinese 5 spice blend [read: html loc. also there are five entries]
+with open("spices_en.csv") as csvfile:
+    cabinet = list(csv.reader(csvfile))[0]
 
 # Parse the file into soup
 with open('export/index.html', 'r', encoding='utf-8') as fin:
@@ -45,14 +50,14 @@ for line in toc_emdashes:
 toast = soup.new_tag (
     "div",
     id="snackbar",
-    string="Link Copied!"
+    string=cabinet[0]
 )
 
 # add return to ref button
 ref = soup.new_tag (
     "div",
     id="return",
-    title="Return to previous position"
+    title=cabinet[1]
 )
 
 # prepend bottom with all the silly stuff i add
@@ -64,7 +69,7 @@ soup.body.insert(0, toast, ref, toggles, header, toc)
 head_meta = soup.new_tag(
     'meta',
     property='og:title',
-    content='A Practical Guide To Feminizing HRT',
+    content=cabinet[2],
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
@@ -96,7 +101,7 @@ soup.head.append("\n")
 head_meta = soup.new_tag(
     'meta',
     property='og:description',
-    content='The futile attempt at answering every possible question for someone looking to trans their sex.',
+    content=cabinet[3],
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
@@ -137,7 +142,7 @@ for element in soup.find_all(["h2", "h3"]):
         'a',
         **{'class':'ltx_ref chain'},
         href="#" + hash,
-        title="Click to copy a link here",
+        title=cabinet[4],
         onclick="copyURI(event)",
         string=' 🔗',
     )
