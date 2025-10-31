@@ -135,7 +135,7 @@ for element in soup.find_all(["h2", "h3"]):
 
     new_chain = soup.new_tag(
         'a',
-        **{'class':'ltx_ref chain'},
+        **{'class':'chain'},
         href="#" + hash,
         title="Click to copy a link here",
         onclick="copyURI(event)",
