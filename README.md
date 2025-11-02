@@ -11,13 +11,13 @@ You might also need to install `texlive-latex-extra` with your package manager o
 
 ```bash
 cd pghrt
-python3 -m venv venv
-venv/bin/pip install beautifulsoup4
+python3 -m venv .venv
+.venv/bin/pip install beautifulsoup4
 ```
 
 ## Build Instructions
 
 ```bash
 latexmlc --destination=export/index.html pghrt
-venv/bin/python soup.py
+.venv/bin/python soup.py
 ```
