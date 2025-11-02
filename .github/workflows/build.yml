@@ -23,8 +23,7 @@ jobs:
     - name: Install LaTeXML and dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y latexml
-        sudo apt-get install -y texlive-latex-extra
+        sudo apt-get install -y latexml texlive-latex-extra
     
     - name: Create Python virtual environment
       run: |
