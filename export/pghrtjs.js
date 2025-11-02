@@ -135,7 +135,7 @@ function returnScroll() {
 		const scrollArray = JSON.parse(sessionStorage.getItem("scrollPos") ?? "[]").map(num => Number(num));
 		// check if saved, otherwise goto top and remove back arrow
 		if (scrollArray.length > 1) {
-			pos = scrollArray.shift();
+			let pos = scrollArray.shift();
 			sessionStorage.setItem("scrollPos", JSON.stringify(scrollArray));
 			window.scroll(0, pos);
 		}
