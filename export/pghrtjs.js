@@ -130,7 +130,8 @@ function saveScroll() {
 
 // it returns to scroll positions stored in the array "scrollPos"
 function returnScroll() {
-	document.getElementById("return").addEventListener("click", () => {
+	const ret = document.getElementById("return");
+	ret.addEventListener("click", () => {
 
 		const scrollArray = JSON.parse(sessionStorage.getItem("scrollPos") ?? "[]").map(num => Number(num));
 		// check if saved, otherwise goto top and remove back arrow
@@ -140,13 +141,13 @@ function returnScroll() {
 			window.scroll(0, pos);
 		}
 		else if (scrollArray.length === 1) {
-			this.classList.remove("show");
+			ret.classList.remove("show");
 			let pos = scrollArray.shift();
 			sessionStorage.setItem("scrollPos", JSON.stringify(scrollArray));
 			// scroll to top
 			window.scroll(0, pos);
 		} else {
-			this.classList.remove("show");
+			ret.classList.remove("show");
 			// scroll to top
 			window.scroll(0, 0);
 		}
