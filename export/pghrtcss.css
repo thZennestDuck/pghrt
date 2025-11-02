@@ -128,7 +128,8 @@ a.ltx_LaTeXML_logo:visited {
 }
 
 .ltx_TOC a {
-  display: block; width: 100%;
+  display: block;
+  width: 100%;
 }
 
 .ltx_TOC {

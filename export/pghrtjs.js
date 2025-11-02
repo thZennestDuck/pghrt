@@ -8,8 +8,8 @@ function initTocOnClick() {
 			coll.classList.toggle("active");
 			const content = coll.nextElementSibling;
 			if (content) {
-				event.preventDefault(); // don't jump
 				if (content.style.maxHeight) {
+					event.preventDefault(); // don't jump if closing
 					content.style.maxHeight = null;
 				} else {
 					content.style.maxHeight = content.scrollHeight + "px";
@@ -122,8 +122,10 @@ function saveScroll() {
 
 			const pos = window.scrollY;
 			const scrollArray = JSON.parse(sessionStorage.getItem("scrollPos") ?? "[]");
-			scrollArray.unshift(pos);
-			sessionStorage.setItem("scrollPos", JSON.stringify(scrollArray));
+			if (scrollArray[0] !== Math.round(pos)) {
+				scrollArray.unshift(Math.round(pos));
+				sessionStorage.setItem("scrollPos", JSON.stringify(scrollArray));
+			}
 		});
 	}
 }
