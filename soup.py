@@ -2,6 +2,11 @@
 from bs4 import BeautifulSoup
 import csv
 
+# TO DO
+# 1. soup the toc title text to be accurate
+# 2. maybe figure out the href title text for extrenal hrefs?
+# 3. add the command line for the loc
+
 # seasonings for soup. it's a chinese 5 spice blend [read: html loc. also there are five entries]
 with open("spices_en.csv") as csvfile:
     cabinet = list(csv.reader(csvfile))[0]
