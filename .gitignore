@@ -13,4 +13,4 @@ test.html
 pghrt.pdf
 contacts.txt
 *.DS_Store
-/venv/
+/.venv/
