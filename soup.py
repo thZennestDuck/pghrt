@@ -6,6 +6,8 @@ import csv
 # 1. soup the toc title text to be accurate
 # 2. maybe figure out the href title text for extrenal hrefs?
 # 3. add the command line for the loc
+# 4. ALT TEXT OMFG!!!!!
+# 5. exit page button
 
 # seasonings for soup. it's a chinese 5 spice blend [read: html loc. also there are five entries]
 with open("spices_en.csv") as csvfile:
