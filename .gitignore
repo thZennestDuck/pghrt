@@ -8,8 +8,6 @@
 *.synctex(busy)
 *.gz
 *.toc
-LaTeXML.css
-ltx-article.css
 test.py
 test.html
 pghrt.pdf
