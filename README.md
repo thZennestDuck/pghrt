@@ -5,9 +5,11 @@ This is the source code, just in case you wanted to build it yourself for some r
 If you are interested in doing a translation or some sort of alternate version, please get in touch!
 
 ## Setting Up
-This project uses `LaTeXML`. Install it [here](https://math.nist.gov/~BMiller/LaTeXML/get.html)
+This project is reliant on `LaTeXML` and owes deep gratitute for its existence. Install it [here](https://math.nist.gov/~BMiller/LaTeXML/get.html), and please support it if you can!
 
-You might also need to install `texlive-latex-extra` with your package manager of choice.
+You might also need to install `texlive-latex-extra` with your package manager of choice, or specific missing packages through `MiKTeX` if you prefer a lighter weight LaTeX installation. This project was created using Visual Studio Code so `.vscode` is included for your convenience if that is your editor of choice to build via `build.ps1` but can otherwise be ignored.
+
+### Linux
 
 ```bash
 cd pghrt
@@ -15,9 +17,28 @@ python3 -m venv .venv
 .venv/bin/pip install beautifulsoup4
 ```
 
+### Windows
+
+```bash
+cd pghrt
+python -m venv .venv
+.venv/scripts/pip install beautifulsoup4
+```
+
 ## Build Instructions
+
+Currently, `/export` contains the full build output. To compile and build the source yourself, the instructions are listed below. Please note that the `\DTMNow` error in the output of `latexmlc` should be ignored as it is handled by `soup.py`.
+
+### Linux
 
 ```bash
 latexmlc --destination=export/index.html pghrt
 .venv/bin/python soup.py
+```
+
+### Windows
+
+```bash
+latexmlc --destination=export/index.html pghrt
+.venv/scripts/python soup.py
 ```
