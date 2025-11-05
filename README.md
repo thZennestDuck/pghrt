@@ -7,7 +7,7 @@ If you are interested in doing a translation or some sort of alternate version, 
 ## Setting Up
 This project is reliant on `LaTeXML` and owes deep gratitute for its existence. Install it [here](https://math.nist.gov/~BMiller/LaTeXML/get.html), and please support it if you can!
 
-You might also need to install `texlive-latex-extra` with your package manager of choice, or specific missing packages through `MiKTeX` if you prefer a lighter weight LaTeX installation. This project was created using Visual Studio Code so `.vscode` is included for your convenience if that is your editor of choice to build via `build.ps1` but can otherwise be ignored.
+You might also need to install `texlive-latex-extra` with your package manager of choice, or specific missing packages through `MiKTeX` if you prefer a lighter weight LaTeX installation. This project was created using Visual Studio Code so `.vscode` is included for your convenience if that is your editor of choice to build via `build.ps1` but it can otherwise be ignored.
 
 ### Linux
 
@@ -42,3 +42,7 @@ latexmlc --destination=export/index.html pghrt
 latexmlc --destination=export/index.html pghrt
 .venv/scripts/python soup.py
 ```
+
+## License
+
+I don't know. Please attribute credit when it is safe and reasonable to do so. Please feel free to use any of this as a template (if you'd like to rip the guts of the .tex out) if it aids you in writing your own document about transition. We need more quality resources out there.
