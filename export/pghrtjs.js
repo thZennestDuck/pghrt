@@ -166,13 +166,13 @@ function returnScroll() {
 			while (scrollPos === Math.floor(window.scrollY) && scrollArray.length > 0) {
 				scrollPos = scrollArray.shift();
 			}
-			sessionStorage.setItem("scrollPos", JSON.stringify(scrollArray));
+			updateScrollArray(scrollArray);
 			window.scroll(0, scrollPos);
 		}
 		else if (scrollArray.length === 1) {
 			this.classList.remove("show");
 			let scrollPos = scrollArray.shift();
-			sessionStorage.setItem("scrollPos", JSON.stringify(scrollArray));
+			updateScrollArray(scrollArray);
 			// scroll to top
 			window.scroll(0, scrollPos);
 		} else {
