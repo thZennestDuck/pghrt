@@ -1,20 +1,66 @@
 #source: @jonesetc.com ty king you're an icon
 from bs4 import BeautifulSoup
+import os
 import csv
+import sys
+
 
 # TO DO
 # 1. soup the toc title text to be accurate
 # 2. maybe figure out the href title text for extrenal hrefs?
-# 3. add the command line for the loc
-# 4. ALT TEXT OMFG!!!!!
-# 5. exit page button
+# 3. add alt text to images???
 
-# seasonings for soup. it's a chinese 5 spice blend [read: html loc. also there are five entries]
-with open("spices_en.csv") as csvfile:
+# the output is still just index.html fyi don't forget
+
+#
+# begin parsing file
+#
+
+# list of currently supported languages
+lang_codes = ["en", "de"]
+
+# check if a code is used
+if len(sys.argv) < 2: 
+    print("MISSING LANGUAGE CODE. Usage: python soup.py <language code>") 
+    sys.exit(1) 
+
+# check if too many codes are used for some reason
+if len(sys.argv) > 2: 
+    print("TOO MANY LANGUAGE CODES. Usage: python soup.py <language code>") 
+    sys.exit(1) 
+
+# check if it's a currently supported language. idk how you'd miss this up but it's a typo check basically
+language = sys.argv[1]
+if language not in lang_codes:
+    print("INCORRECT LANGUAGE CODE. Currently supported: ", lang_codes)
+    sys.exit(1)
+
+# debugging check
+print("Language used: ",language)
+
+# build spice cabinet to make soup for each language
+# file path relative to main example: trans/en/spices_en.csv
+language_path = os.path.join("trans",language)
+spice_file = "spices_" + language + ".csv"
+cabinet_file = os.path.join(language_path,spice_file)
+
+# choose file for language
+# en carve out to be default index.html
+html_loc_name = "index_" + language + ".html"
+if language == "en":
+    html_file = os.path.join("export","index.html")
+else:
+    html_file = os.path.join("export",html_loc_name)
+#
+# begin making soup
+#
+
+# seasonings for soup. it's a chinese 5 spice blend [read: html loc. also there are five entries in the localization file]
+with open(cabinet_file) as csvfile:
     cabinet = list(csv.reader(csvfile))[0]
 
 # Parse the file into soup
-with open('export/index.html', 'r', encoding='utf-8') as fin:
+with open(html_file, 'r', encoding='utf-8') as fin:
     soup = BeautifulSoup(fin, 'html.parser')
 
 # Create menu button, header, and nest
@@ -54,6 +100,7 @@ for line in toc_emdashes:
     line.string.insert_before('—')
 
 # adding a toast
+# localization position 0: "Link Copied!"
 toast = soup.new_tag (
     "div",
     id="snackbar",
@@ -61,6 +108,7 @@ toast = soup.new_tag (
 )
 
 # add return to ref button
+# localization position 1: "Return to previous position"
 ref = soup.new_tag (
     "div",
     id="return",
@@ -72,6 +120,8 @@ soup.body.insert(0, toast, ref, toggles, header, toc)
 
 # Add header info tags
 # i don't know if there's a better way to do all of these in a batch but like eh w/e
+# localization position 2: "A Practical Guide To Feminizing HRT"
+# localization position 3: "The futile attempt yadda yadda"
 
 head_meta = soup.new_tag(
     'meta',
@@ -89,10 +139,13 @@ head_meta = soup.new_tag(
 soup.head.append(head_meta)
 soup.head.append("\n")
 
+# localizing
+og_url_tag = "https://" + language + "pghrt.diy"
+
 head_meta = soup.new_tag(
     'meta',
     property='og:url',
-    content='https://www.pghrt.diy',
+    content=og_url_tag,
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
@@ -141,6 +194,7 @@ soup.head.append(head_meta)
 soup.head.append("\n")
 
 # find all the section and question headers then add a click to copy icon
+# localization position 4: "Click to copy"
 for element in soup.find_all(["h2", "h3"]):
     #find the id of its section
     hash = element.parent['id']
@@ -168,8 +222,8 @@ timestamp.replace_with(postmarked)
 dtm.string = postmarked.replace("Generated on ", "").replace(" by ", "")
 
 # i'm at soup
-print("soup")
+print("soup made for language: ",language)
 
 # Write the updated soup back out to the file
-with open('export/index.html', 'w', encoding='utf-8') as fout:
+with open(html_file, 'w', encoding='utf-8') as fout:
     fout.write(str(soup))
