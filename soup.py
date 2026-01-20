@@ -17,7 +17,7 @@ import sys
 #
 
 # list of currently supported languages
-lang_codes = ["en", "de"]
+lang_codes = ["en"]
 
 # check if a code is used
 if len(sys.argv) < 2: 
