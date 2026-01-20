@@ -46,7 +46,7 @@ cabinet_file = os.path.join(language_path,spice_file)
 
 # choose file for language
 # en carve out to be default index.html
-html_loc_name = "index_" + language + ".html"
+html_loc_name = language + ".html"
 if language == "en":
     html_file = os.path.join("export","index.html")
 else:
