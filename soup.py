@@ -212,7 +212,13 @@ for element in soup.find_all(["h2", "h3"]):
 # changing pdf link for non-english language
 # hosted on github because that keeps the site lighter under cloudflare's limit
 if language != "en":
-    soup.find(href="pghrt.pdf")['href'] = "https://raw.githubusercontent.com/Juicysteak117/pghrt/refs/heads/main/pdfs/" + language + ".pdf"
+    soup.find(href="https://raw.githubusercontent.com/Juicysteak117/pghrt/refs/heads/main/pdfs/pghrt.pdf")['href'] = "https://raw.githubusercontent.com/Juicysteak117/pghrt/refs/heads/main/pdfs/" + language + ".pdf"
+
+# appending "img/" to source of images for the html
+# can't get latexml to play nice with graphicspath so this is easier
+for element in soup.select('figure > img'):
+    old_string = element['src']
+    element['src'] = 'img/' + old_string
 
 # replacing \DTMNow with the footer timestamp because there aren't latexml
 # bindings for the datetime2 package and i want it to look prettier
