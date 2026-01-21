@@ -1,1 +1,0 @@
-latexmlc --destination=export/index.html pghrt; python soup.py
