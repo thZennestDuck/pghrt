@@ -59,7 +59,7 @@ else:
 
 # seasonings for soup. it's a chinese 5 spice blend [read: html loc. also there are five entries in the localization file]
 with open(cabinet_file) as csvfile:
-    cabinet = list(csv.reader(csvfile))[0]
+    cabinet = list(csv.reader(csvfile, delimiter='|'))[0]
 
 # Parse the file into soup
 with open(html_file, 'r', encoding='utf-8') as fin:
