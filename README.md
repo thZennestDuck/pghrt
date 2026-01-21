@@ -31,20 +31,6 @@ Currently, `/export` contains the build output for the HTML files where `/pdfs` 
 
 Please note that the `\DTMNow` error in the output of `latexmlc` should be ignored as it is handled by `soup.py`. There will also be a compile error unless the Python 3 package BeautifulSoup version 4.14+ is installed. `soup.py` manages the HTML post-processing and localization using the constitute components in `/trans`.
 
-### Linux
-
-```bash
-latexmlc --destination=export/index.html pghrt
-.venv/bin/python soup.py
-```
-
-### Windows
-
-```bash
-latexmlc --destination=export/index.html pghrt
-.venv/scripts/python soup.py
-```
-
 ## License
 
 I don't know. Please attribute credit when it is safe and reasonable to do so. Please feel free to use any of this as a template (if you'd like to rip the guts of the .tex out) if it aids you in writing your own document about transition. We need more quality resources out there.
