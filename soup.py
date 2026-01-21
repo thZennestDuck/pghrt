@@ -15,7 +15,7 @@ import sys
 #
 
 # list of currently supported languages
-lang_codes = ["en"]
+lang_codes = ["en", "de"]
 
 # check if a code is used
 if len(sys.argv) < 2: 
@@ -44,6 +44,7 @@ cabinet_file = os.path.join(language_path,spice_file)
 
 # choose file for language
 # en carve out to be default index.html
+# en carve out for pdf file name as well
 html_loc_name = language + ".html"
 if language == "en":
     html_file = os.path.join("export","index.html")
@@ -51,6 +52,7 @@ if language == "en":
 else:
     html_file = os.path.join("export",html_loc_name)
     og_url_tag = "https://" + language + ".pghrt.diy"
+    pdf_file_name = language + ".pdf"
 #
 # begin making soup
 #
@@ -206,6 +208,10 @@ for element in soup.find_all(["h2", "h3"]):
     )
 
     element.append(new_chain)
+
+# changing pdf link for non-english language
+if language != "en":
+    soup.find(href="pghrt.pdf")['href'] = language + ".pdf"
 
 # replacing \DTMNow with the footer timestamp because there aren't latexml
 # bindings for the datetime2 package and i want it to look prettier
