@@ -58,7 +58,7 @@ else:
 #
 
 # seasonings for soup. it's a chinese 5 spice blend [read: html loc. also there are five entries in the localization file]
-with open(cabinet_file) as csvfile:
+with open(cabinet_file, encoding='utf-8') as csvfile:
     cabinet = list(csv.reader(csvfile, delimiter='|'))[0]
 
 # Parse the file into soup
@@ -218,7 +218,7 @@ if language != "en":
 # can't get latexml to play nice with graphicspath so this is easier
 for element in soup.select('figure > img'):
     old_string = element['src']
-    element['src'] = 'img/' + old_string
+    element['src'] = 'https://pghrt.diy/img/' + old_string
 
 # hardcoding the asset links so it plays nice with the subdomain
 soup.find(href="LaTeXML.css")['href'] = "https://pghrt.diy/LaTeXML.css"
