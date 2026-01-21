@@ -152,7 +152,7 @@ soup.head.append("\n")
 head_meta = soup.new_tag(
     'meta',
     property='og:image',
-    content='/img/cover.png',
+    content='https://pghrt.diy/img/cover.png',
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
@@ -169,7 +169,7 @@ head_meta = soup.new_tag(
     'link',
     rel='icon',
     type='image/png',
-    href='/img/favicon.png'
+    href='https://pghrt.diy/img/favicon.png'
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
@@ -178,7 +178,7 @@ head_meta = soup.new_tag(
     'link',
     rel='stylesheet',
     type='text/css',
-    href='pghrtcss.css'
+    href='https://pghrt.diy/pghrtcss.css'
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
@@ -186,7 +186,7 @@ soup.head.append("\n")
 head_meta = soup.new_tag(
     'script',
     type='text/javascript',
-    src='pghrtjs.js',
+    src='https://pghrt.diy/pghrtjs.js',
     defer='true'
 )
 soup.head.append(head_meta)
@@ -219,6 +219,10 @@ if language != "en":
 for element in soup.select('figure > img'):
     old_string = element['src']
     element['src'] = 'img/' + old_string
+
+# hardcoding the asset links so it plays nice with the subdomain
+soup.find(href="LaTeXML.css")['href'] = "https://pghrt.diy/LaTeXML.css"
+soup.find(href="ltx-article.css")['href'] = "https://pghrt.diy/ltx-article.css"
 
 # replacing \DTMNow with the footer timestamp because there aren't latexml
 # bindings for the datetime2 package and i want it to look prettier
