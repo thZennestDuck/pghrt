@@ -1,44 +1,46 @@
-// this function adds the + and functionality to the toc so that it is less scary 
+// this function adds the + and functionality to the toc so that it is less scary
 // it's still pretty scary ngl it's a giant toc but at least it starts hidden
 function initTocOnClick() {
-	var coll = document.querySelectorAll(".ltx_tocentry.ltx_tocentry_section > .ltx_ref");
-	var i;
+	const colls = document.querySelectorAll(".ltx_tocentry.ltx_tocentry_section > .ltx_ref");
 
-	for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function (event) {
-			this.classList.toggle("active");
-			var content = this.nextElementSibling;
+	for (const coll of colls) {
+		coll.addEventListener("click", (event) => {
+			const content = coll.nextElementSibling;
 			if (content) {
 				if (content.style.maxHeight) {
+					event.preventDefault(); // don't jump if closing
 					content.style.maxHeight = null;
-					event.preventDefault(); // don't jump when closing 
 				} else {
 					content.style.maxHeight = content.scrollHeight + "px";
 				}
-			} else { }
+			}
 		});
 		// don't add the + if there's nothing to expand
-		if (coll[i].nextElementSibling) { } else {
-			coll[i].classList.add("del");
+		if (!coll.nextElementSibling) {
+			coll.classList.add("del");
 		}
 	}
 }
 
 // copy on click for section permalinks
-function copyURI(evt) {
-	evt.preventDefault();
-	// ensures url is without hash, then add on correct hash
-	navigator.clipboard.writeText(window.location.href.replace(window.location.hash,'') + evt.target.getAttribute('href')).then(() => {
-	// clipboard successfully set
-    }, () => {
-	// clipboard write failed
-    });
+function copyURI(event) {
+	event.preventDefault();
+	try {
+		navigator.clipboard.writeText(
+			// ensures url is without hash, then add on correct hash
+			window.location.href.replace(window.location.hash, "") + event.target.getAttribute("href")
+		);
+	} catch (e) {
+		console.error(e);
+	}
 	// toast that i ripped from w3schools. does not nicely handle being spam clicked. w/e
 	// OKAY understanding more later. why is this replace and not remove? so ugly wow...
 	// you're telling me that chatgpt and copilot were trained on obtuse garbage like this!?
-	var x = document.getElementById("snackbar");
-	x.className = "show";
-	setTimeout(function(){ x.className = x.className.replace("show", ""); }, 2000);
+	const snackbar = document.getElementById("snackbar");
+	snackbar.className = "show";
+	setTimeout(() => {
+		snackbar.className = snackbar.className.replace("show", "");
+	}, 2000);
 }
 
 // source: https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting
@@ -47,118 +49,159 @@ function copyURI(evt) {
 function detectColorScheme() {
 	// check if already saved dark
 	if (localStorage.getItem("theme")) {
-		if (localStorage.getItem("theme") == "dark") {
+		if (localStorage.getItem("theme") === "dark") {
 			document.documentElement.setAttribute("data-theme", "dark");
 		}
 	} else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 		// set to dark if OS preferred
 		document.documentElement.setAttribute("data-theme", "dark");
-		localStorage.setItem('theme', 'dark');
+		localStorage.setItem("theme", "dark");
 	} else {
 		// default light otherwise
 		document.documentElement.setAttribute("data-theme", "light");
-		localStorage.setItem('theme', 'light');
+		localStorage.setItem("theme", "light");
 	}
 }
 
-function detectFont(){
-    // check if user wants sans
-	if (localStorage.getItem("font") == "sans") {
+function detectFont() {
+	// check if user wants sans
+	if (localStorage.getItem("font") === "sans") {
 		document.documentElement.setAttribute("data-font", "sans");
-		localStorage.setItem('font', 'sans');
+		localStorage.setItem("font", "sans");
 	}
 	else {
 		// otherwise give avec
 		document.documentElement.setAttribute("data-font", "avec");
-		localStorage.setItem('font', 'avec');
+		localStorage.setItem("font", "avec");
 	}
 }
 
 // source: https://www.accessibilityfirst.at/posts/dark-and-light-mode-a-simple-guide-for-web-design-and-development
 // add onClick to toggle theme between light and dark
 function initThemeToggle() {
-	document.getElementById('theme-toggle').addEventListener('click', () => {
+	document.getElementById("theme-toggle").addEventListener("click", () => {
 		document.documentElement.setAttribute(
-			'data-theme',
-			document.documentElement.getAttribute('data-theme') === 'dark'
-				? 'light'
-				: 'dark'
+			"data-theme",
+			document.documentElement.getAttribute("data-theme") === "dark"
+				? "light"
+				: "dark"
 		);
 		localStorage.setItem(
-			'theme',
-			document.documentElement.getAttribute('data-theme')
+			"theme",
+			document.documentElement.getAttribute("data-theme")
 		);
 	});
 }
 
 // the same function except it's for font toggle
 // btw i think i'm a little funny for the var naming
+// funny status redacted for the var naming
 function initFontToggle() {
-	document.getElementById('font-toggle').addEventListener('click', () => {
+	document.getElementById("font-toggle").addEventListener("click", () => {
 		document.documentElement.setAttribute(
-			'data-font',
-			document.documentElement.getAttribute('data-font') === 'avec'
-				? 'sans'
-				: 'avec'
+			"data-font",
+			document.documentElement.getAttribute("data-font") === "avec"
+				? "sans"
+				: "avec"
 		);
 		localStorage.setItem(
-			'font',
-			document.documentElement.getAttribute('data-font')
+			"font",
+			document.documentElement.getAttribute("data-font")
 		);
 	});
 }
 
 // saving the scroll position for clicking references or toc
 function saveScroll() {
-	var coll = document.querySelectorAll(".ltx_ref");
-	var i;
+	const colls = document.querySelectorAll(".ltx_ref");
 
-	for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function () {
-			document.getElementById("return").classList.add("show"); // only fires once
-
-			pos = window.scrollY;
-			scrollArray = JSON.parse(sessionStorage.getItem('scrollPos'));
-			scrollArray.unshift(pos);		
-			sessionStorage.setItem('scrollPos', JSON.stringify(scrollArray));
+	for (const coll of colls) {
+		coll.addEventListener("click", function(event) {
+			//only applies the "active" class to the ToC items (put here to prevent a race condition)
+			if (this.parentElement.classList.contains("ltx_tocentry_section")) {
+				const isActive = this.classList.toggle("active");
+				if (!isActive) return;
+			}
+			
+			const scrollPos = Math.floor(window.scrollY);
+			const linkedElement = document.querySelector(this.getAttribute("href").replaceAll(".", "\\2E")); // \\2E is "."
+			const linkedElementScrollPos = linkedElement ? scrollPos + Math.floor(linkedElement.getBoundingClientRect().y) : 0;
+			const scrollArray = getScrollArray();
+			if (
+				(scrollPos === 0 && scrollArray.length > 0)
+				|| (scrollPos > 0 && scrollArray[0] !== scrollPos)
+				|| (scrollPos > 0 && linkedElementScrollPos !== scrollArray[0])
+			) {
+				scrollArray.unshift(scrollPos);
+				updateScrollArray(scrollArray);
+			}
+			
+			updateReturn(scrollArray);
 		});
 	}
 }
 
-// it returns. positions stored in array then will jump back 
-function returnScroll() {
-	document.getElementById("return").addEventListener("click", function () {
+function getScrollArray() {
+	return JSON.parse(sessionStorage.getItem("scrollPos") ?? "[]").map(num => Number(num));
+}
 
-		scrollArray = JSON.parse(sessionStorage.getItem('scrollPos'));
+function updateScrollArray(scrollArray=[]) {
+	sessionStorage.setItem("scrollPos", JSON.stringify(scrollArray));
+}
+
+function updateReturn(scrollArray) {
+	if (typeof scrollArray === "object" && scrollArray.length > 0) {
+		document.getElementById("return").classList.add("show"); // only fires once
+	}
+}
+
+// it returns to scroll positions stored in the array "scrollPos"
+function returnScroll() {
+	document.getElementById("return").addEventListener("click", function(event) {
+
+		const scrollArray = getScrollArray();
 		// check if saved, otherwise goto top and remove back arrow
 		if (scrollArray.length > 1) {
-			pos = scrollArray.shift();
-			sessionStorage.setItem('scrollPos', JSON.stringify(scrollArray));
-			window.scroll(0, Number(pos));
+			let scrollPos = scrollArray.shift();
+			while (scrollPos === Math.floor(window.scrollY) && scrollArray.length > 0) {
+				scrollPos = scrollArray.shift();
+			}
+			updateScrollArray(scrollArray);
+			window.scroll(0, scrollPos);
 		}
-		else if (scrollArray.length == 1) {
+		else if (scrollArray.length === 1) {
 			this.classList.remove("show");
-			pos = scrollArray.shift();
-			sessionStorage.setItem('scrollPos', JSON.stringify(scrollArray));
-			window.scroll(0, Number(pos));
-			// scroll top
-		}
-		else {
+			let scrollPos = scrollArray.shift();
+			updateScrollArray(scrollArray);
+			// scroll to top
+			window.scroll(0, scrollPos);
+		} else {
 			this.classList.remove("show");
+			// scroll to top
 			window.scroll(0, 0);
-			// scroll top
 		}
 
 	});
 }
 
 // run da functions
-initTocOnClick();
-detectColorScheme();
-detectFont();
-initThemeToggle();
-initFontToggle();
-saveScroll();
-returnScroll();
-// init scoll pos array storage (should this be done elsehow?)
-sessionStorage.setItem('scrollPos', JSON.stringify([]));
+function main() {
+	const funcs = [
+		initTocOnClick,
+		detectColorScheme,
+		detectFont,
+		initThemeToggle,
+		initFontToggle,
+		saveScroll,
+		returnScroll
+	];
+	for (const func of funcs) {
+		try {
+			func();
+		} catch (e) {
+			console.error(e);
+		}
+	}
+}
+
+main();

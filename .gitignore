@@ -8,9 +8,9 @@
 *.synctex(busy)
 *.gz
 *.toc
-LaTeXML.css
-ltx-article.css
 test.py
 test.html
 contacts.txt
 *.DS_Store
+/.venv/
+/venv/
