@@ -211,6 +211,7 @@ for element in soup.find_all(["h2", "h3"]):
 # bindings for the datetime2 package and i want it to look prettier
 # i also remove the double space because it REALLY annoys me. i already sent
 # in an issue about it though. eventually i can remove that line lol
+# i realize this doesn't localize but truly do i care???? no. come on now.
 dtm = soup.body.find('span', class_='ltx_ERROR undefined')
 dtm['class'] = 'undefined'
 timestamp = soup.footer.div.contents[0]
