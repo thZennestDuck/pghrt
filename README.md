@@ -7,7 +7,7 @@ If you are interested in doing a translation or some sort of alternate version, 
 ## Setting Up
 This project is reliant on `LaTeXML` and owes deep gratitute for its existence. Install it [here](https://math.nist.gov/~BMiller/LaTeXML/get.html), and please support it if you can!
 
-You might also need to install `texlive-latex-extra` with your package manager of choice, or specific missing packages through `MiKTeX` if you prefer a lighter weight LaTeX installation. This project was created using Visual Studio Code so `.vscode` is included for your convenience if that is your editor of choice to build via `build.ps1` but it can otherwise be ignored.
+You might also need to install `texlive-latex-extra` with your package manager of choice, or specific missing packages through `MiKTeX` if you prefer a lighter weight LaTeX installation. This project was created using Visual Studio Code so `.vscode` is included for your convenience for the build tasks.
 
 ### Linux
 
@@ -27,7 +27,9 @@ python -m venv .venv
 
 ## Build Instructions
 
-Currently, `/export` contains the full build output. To compile and build the source yourself, the instructions are listed below. Please note that the `\DTMNow` error in the output of `latexmlc` should be ignored as it is handled by `soup.py`.
+Currently, `/export` contains the build output for the HTML files where `/pdfs` contains the PDFs. To compile and build the source yourself, run either the `build_en.ps1` file (for just English) or the `build_all.ps1` file (for all supported languages) should be ran.
+
+Please note that the `\DTMNow` error in the output of `latexmlc` should be ignored as it is handled by `soup.py`. There will also be a compile error unless the Python 3 package BeautifulSoup version 4.14+ is installed. `soup.py` manages the HTML post-processing and localization using the constitute components in `/trans`.
 
 ### Linux
 
