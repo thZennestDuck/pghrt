@@ -9,7 +9,7 @@
 set-executionpolicy -ExecutionPolicy RemoteSigned -Scope Process
 .\.venv\Scripts\Activate.ps1
 
-# currently supported non-english languages
+# currently supported non-english languages; source of truth
 # german (de), 
 $languages = @("de")
 $output = $languages -join " "

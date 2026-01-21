@@ -16,9 +16,6 @@ import sys
 # begin parsing file
 #
 
-# list of currently supported languages
-lang_codes = ["en", "de"]
-
 # check if a code is used
 if len(sys.argv) < 2: 
     print("MISSING LANGUAGE CODE. Usage: python soup.py <language code>") 
@@ -31,29 +28,36 @@ if len(sys.argv) > 2:
 
 # check if it's a currently supported language. idk how you'd miss this up but it's a typo check basically
 language = sys.argv[1]
-if language not in lang_codes:
-    print("INCORRECT LANGUAGE CODE. Currently supported: ", lang_codes)
-    sys.exit(1)
 
 # debugging check
 print("Language used: ",language)
 
 # build spice cabinet to make soup for each language
-# file path relative to main example: trans/en/spices_en.csv
+# file path relative to main. example: trans/de/spices_de.csv
+
 language_path = os.path.join("trans",language)
 spice_file = "spices_" + language + ".csv"
-cabinet_file = os.path.join(language_path,spice_file)
 
 # choose file for language
 # en carve out to be default index.html
 # en carve out for pdf file name as well
+# en carve out for cabinet file
 html_loc_name = language + ".html"
 if language == "en":
     html_file = os.path.join("export","index.html")
     og_url_tag = "https://pghrt.diy"
+    cabinet_file = spice_file
 else:
     html_file = os.path.join("export",html_loc_name)
     og_url_tag = "https://" + language + ".pghrt.diy"
+    cabinet_file = os.path.join(language_path,spice_file)
+    if not os.path.isfile(html_file):
+        print("ERROR:",html_file,"DOES NOT EXIST. Is your language code wrong or did you not build the HTML?")
+        sys.exit(1)
+
+if not os.path.isfile(cabinet_file):
+    print("ERROR:",cabinet_file,"DOES NOT EXIST. Is your language code wrong or do you not have your spices?")
+    sys.exit(1)
 
 #
 # begin making soup
