@@ -7,8 +7,10 @@ import sys
 
 # TO DO
 # 1. soup the toc title text to be accurate
-# 2. maybe figure out the href title text for extrenal hrefs?
+# 2. maybe figure out the href title text for external hrefs?
 # 3. add alt text to images???
+# 4. make the language links auto-generate via soup not tex
+# 5. parametrize the header tags with touples (why didn't i do this sooner? so obvious)
 
 #
 # begin parsing file
