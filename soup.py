@@ -34,7 +34,6 @@ print("Language used: ",language)
 
 # build spice cabinet to make soup for each language
 # file path relative to main. example: trans/de/spices_de.csv
-
 language_path = os.path.join("trans",language)
 spice_file = "spices_" + language + ".csv"
 
@@ -42,18 +41,19 @@ spice_file = "spices_" + language + ".csv"
 # en carve out to be default index.html
 # en carve out for pdf file name as well
 # en carve out for cabinet file
-html_loc_name = language + ".html"
 if language == "en":
     html_file = os.path.join("export","index.html")
     og_url_tag = "https://pghrt.diy"
     cabinet_file = spice_file
 else:
+    html_loc_name = language + ".html"
     html_file = os.path.join("export",html_loc_name)
     og_url_tag = "https://" + language + ".pghrt.diy"
     cabinet_file = os.path.join(language_path,spice_file)
-    if not os.path.isfile(html_file):
-        print("ERROR:",html_file,"DOES NOT EXIST. Is your language code wrong or did you not build the HTML?")
-        sys.exit(1)
+
+if not os.path.isfile(html_file):
+    print("ERROR:",html_file,"DOES NOT EXIST. Is your language code wrong or did you not build the HTML?")
+    sys.exit(1)
 
 if not os.path.isfile(cabinet_file):
     print("ERROR:",cabinet_file,"DOES NOT EXIST. Is your language code wrong or do you not have your spices?")
