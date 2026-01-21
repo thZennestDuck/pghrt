@@ -10,8 +10,6 @@ import sys
 # 2. maybe figure out the href title text for extrenal hrefs?
 # 3. add alt text to images???
 
-# the output is still just index.html fyi don't forget
-
 #
 # begin parsing file
 #
@@ -49,8 +47,10 @@ cabinet_file = os.path.join(language_path,spice_file)
 html_loc_name = language + ".html"
 if language == "en":
     html_file = os.path.join("export","index.html")
+    og_url_tag = "https://pghrt.diy"
 else:
     html_file = os.path.join("export",html_loc_name)
+    og_url_tag = "https://" + language + ".pghrt.diy"
 #
 # begin making soup
 #
@@ -138,9 +138,6 @@ head_meta = soup.new_tag(
 )
 soup.head.append(head_meta)
 soup.head.append("\n")
-
-# localizing
-og_url_tag = "https://" + language + "pghrt.diy"
 
 head_meta = soup.new_tag(
     'meta',
