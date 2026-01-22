@@ -4,13 +4,24 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "pghrt: build",
+            "label": "pghrt: build en",
             "type": "shell",
-            "command": ".\\build.ps1",
+            "command": ".\\build_en.ps1",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
+            }
+
+        },
+        {
+            "label": "pghrt: build all",
+            "type": "shell",
+            "command": ".\\build_all.ps1",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
             }
 
         }
