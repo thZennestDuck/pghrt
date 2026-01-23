@@ -19,7 +19,7 @@ Write-Host "Currently supported languages: $output"
 $lc = Read-Host "Please input the desired language code, or press ENTER to build all"
 
 function New-Language-Build ([string]$lc, [string] $trash) {
-    # probaly easier to doz this ONE english exceptionalism this way instead
+    # probaly easier to do this ONE english exceptionalism this way instead
     if ("en" -ieq $lc) {$html = "index"} else {$html = $lc}
     latexmk -pdf -outdir=pdfs -silent trans/$lc/pghrt_$lc;
     latexmk -c -outdir=pdfs -silent trans/$lc/pghrt_$lc;
