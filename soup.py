@@ -218,6 +218,16 @@ for lc, flag in lang_flags.items():
     first_flag = False if first_flag else lang_links.append(', ')
     lang_links.append(new_flag)
 
+# adding an 88x31 button because omg isn't she so cute!???
+# what a great suggestion. ty acrylic!!!
+# made using: https://hekate2.github.io/buttonmaker/
+cute = soup.new_tag(
+    'img',
+    id='cute',
+    src="https://pghrt.diy/img/pghrt_88x31.png"
+)
+soup.find('section',id="Sx1").insert(0,cute)
+
 # replacing \DTMNow with the footer timestamp because there aren't latexml
 # bindings for the datetime2 package and i want it to look prettier
 # i also remove the double space because it REALLY annoys me. i already sent
