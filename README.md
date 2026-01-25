@@ -24,7 +24,7 @@ Completed languages: English (obviously!), German
 ## Setting Up
 This project is reliant on `LaTeXML` and owes deep gratitute for its existence. Install it [here](https://math.nist.gov/~BMiller/LaTeXML/get.html), and please support it if you can!
 
-You might also need to install `texlive-latex-extra` with your package manager of choice, or specific missing packages through `MiKTeX` if you prefer a lighter weight LaTeX installation. This project was created using Visual Studio Code so `/.vscode/` is included for your convenience for the build tasks in `tasks.json`.
+You might also need to install `texlive-latex-extra` with your package manager of choice, or specific missing packages through [MiKTeX](https://miktex.org/) if you prefer a lighter weight LaTeX installation. This project was created using Visual Studio Code so `/.vscode/` is included for your convenience for the build tasks in `tasks.json`.
 
 ### Linux
 
