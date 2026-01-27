@@ -8,6 +8,7 @@ import sys
 # 1. soup the toc title text to be accurate
 # 2. maybe figure out the href title text for external hrefs?
 # 3. add alt text to images???
+# 4. fix "refer to caption" localization!!!
 
 # MUST ADD FOR NEW LANGS
 lang_flags = {'en': '🇺🇸 English', 'de': '🇩🇪 Deutsch'}
