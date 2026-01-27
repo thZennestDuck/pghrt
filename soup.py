@@ -11,7 +11,7 @@ import sys
 # 4. fix "refer to caption" localization!!!
 
 # MUST ADD FOR NEW LANGS
-lang_flags = {'en': '🇺🇸 English', 'de': '🇩🇪 Deutsch'}
+lang_flags = {'en': '🇺🇸 English', 'de': '🇩🇪 Deutsch', 'fr': '🇫🇷 Français'}
 
 #
 # begin parsing file
