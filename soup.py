@@ -218,7 +218,7 @@ for lc, flag in lang_flags.items():
     )
     if not first_flag:
         lang_links.append(', ')
-        first_flag = False
+    first_flag = False
     lang_links.append(new_flag)
 
 # adding an 88x31 button because omg isn't she so cute!???
