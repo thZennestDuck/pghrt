@@ -17,9 +17,9 @@ The `/trans/en/spices_en.csv` file will also need to be updated to localize part
 
 Desired languages: Portuguese (decent overlap in my audience), Mandarin (lot of speakers!), Korean (inexplicably a lot of traffic from SK), anything someone is interested in doing (never hurts!)
 
-Current list of WIP languages: French, Polish, Czech, Norweigan, Spanish, Dutch, Indonesian, Russian, Ukranian, Danish (tentatively)
+Current list of WIP languages: Polish, Czech, Norweigan, Spanish, Dutch, Indonesian, Russian, Ukranian, Danish (tentatively)
 
-Completed languages: English (obviously!), German
+Completed languages: English (obviously!), German, French
 
 ## Setting Up
 This project is reliant on `LaTeXML` and owes deep gratitute for its existence. Install it [here](https://math.nist.gov/~BMiller/LaTeXML/get.html), and please support it if you can!
