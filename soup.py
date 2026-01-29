@@ -11,7 +11,7 @@ import sys
 # 4. fix "refer to caption" localization!!!
 
 # MUST ADD FOR NEW LANGS
-lang_flags = {'en': '🇺🇸 English', 'de': '🇩🇪 Deutsch'}
+lang_flags = {'en': '🇺🇸 English', 'de': '🇩🇪 Deutsch', 'fr': '🇫🇷 Français'}
 
 #
 # begin parsing file
@@ -216,7 +216,9 @@ for lc, flag in lang_flags.items():
         title=flag,
         string=flag,
     )
-    first_flag = False if first_flag else lang_links.append(', ')
+    if not first_flag:
+        lang_links.append(', ')
+    first_flag = False
     lang_links.append(new_flag)
 
 # adding an 88x31 button because omg isn't she so cute!???
