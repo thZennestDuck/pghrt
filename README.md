@@ -15,9 +15,9 @@ The `/trans/en/spices_en.csv` file will also need to be updated to localize part
 
 ### Language Statuses
 
-Desired languages: Portuguese (decent overlap in my audience), Mandarin (lot of speakers!), Korean (inexplicably a lot of traffic from SK), anything someone is interested in doing (never hurts!)
+Desired languages: Portuguese (decent overlap in my audience), Korean (inexplicably a lot of traffic from SK), anything someone is interested in doing (never hurts!)
 
-Current list of WIP languages: Polish, Czech, Norweigan, Spanish, Dutch, Indonesian, Russian, Ukranian, Danish (tentatively)
+Current list of WIP languages: Polish, Czech, Norweigan, Spanish, Dutch, Indonesian, Russian, Ukranian, Chinese (Simplified & Traditional), Danish (tentatively)
 
 Completed languages: English (obviously!), German, French
 
